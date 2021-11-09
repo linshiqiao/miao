@@ -79,12 +79,18 @@
       <button>在新窗口打开搜索结果</button>
     </form>
     <hr>
-    <form action="C:/Users/林/study/html-basic.html">
+    <form action="">
     <p>个人信息调查表</p>
     <dt>性别</dt>
     <dd>
-      <input type="radio" name="gender">男
-      <input type="radio" name="gender">女
+      <label>
+      <input type="radio" name="gender" value="male" id="gender-male">
+      男
+      </label>
+      <label>
+      <input type="radio" name="gender" value="female" id="gender-female">
+      女
+      </label>
     </dd>
     <dt>年龄</dt>
     <dd>
@@ -118,7 +124,10 @@
     <dt>肤色</dt>
     <dd><input type="color"></dd>
     <dt>自我介绍</dt>
-    <dd><textarea name="massage" id="" cols="30" rows="10" placeholder="</textarea>"></textarea></dd>
+    <dd>
+      <textarea name="massage" id="" cols="30" rows="10">&lt;/textarea>
+      </textarea>
+    </dd>
     <fieldset disabled>
       <legend>这里面的全都禁用了</legend>
         <input type="text">
