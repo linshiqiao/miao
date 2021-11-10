@@ -41,9 +41,11 @@
   <p id="bottom">
     下面是一段javascript代码，最合适用何种标签表示呢？
     <pre>
+      <code>
       function a(){
         return 8
       }
+      </code>
     </pre>
     <hr>
     <ul>
@@ -81,6 +83,7 @@
     <hr>
     <form action="">
     <p>个人信息调查表</p>
+    <dl>
     <dt>性别</dt>
     <dd>
       <label>
@@ -128,6 +131,7 @@
       <textarea name="massage" id="" cols="30" rows="10">&lt;/textarea>
       </textarea>
     </dd>
+    </dl>
     <fieldset disabled>
       <legend>这里面的全都禁用了</legend>
         <input type="text">
@@ -138,7 +142,61 @@
     <button>提交</button>
     <button type="reset">重置</button>
   </form>
+  <hr>
+  <table border="1">
+    <col>
+    <col bgcolor=red>
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>品名</th>
+        <th>进价</th>
+        <th>出价</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>aaa</th>
+        <td>aaa</td>
+        <td rowspan="2">5</td>
+        <td>aaa</td>
+      </tr>
+      <tr>
+        <th>aaa</th>
+        <td>aaa</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <th>aaa</th>
+        <td>aaa</td>
+        <td>aaa</td>
+        <td>aaa</td>
+      </tr>
+      <tr>
+        <th>aaa</th>
+        <td>aaa</td>
+        <td>aaa</td>
+        <td>aaa</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <img usemap="#map1" src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c"
+    alt="图片" width="300">
+  <map name="map1">
+    <area shape="rect" coords="75,135,256,242" href="#" alt="a">
+    <area shape="circle" coords="190,341,150" href="#" alt="a">
+  </map>
+  <hr>
+  <a target="framel" href="http://www.mi.com/">小米</a>
+  <br>
+  <iframe name="framel" src="https://nodejs.org/en/" frameborder="1"></iframe>
   </p>
+  <p>aaa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</p>
+  <pre>aaa           bbbb</pre>
+  
+  <p>>>>>>>>>>>>>>>>>><<<<<<<<<< &lt;span>&lt;/span></p>
+
 
 </body>
 
