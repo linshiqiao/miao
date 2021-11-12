@@ -9,37 +9,43 @@
       color: red;
     }
 
-    #p:hover {
-      color: red;
-    }
-
-    #p:visited {
-      color: green;
-    }
-
-    #p:focus {
-      color: blue;
-    }
-
-    p> :nth-child(1) {
-      color: red;
-    }
-
-    span>:nth-child(1) {
-      color: green;
-    }
-
-    span>:nth-child(2) {
-      color: blue;
-    }
-
-    :visited {
+    a:visited {
       color: orange;
     }
 
-    :link {
+    a:link {
       color: pink;
     }
+
+
+    .a[tabindex="1"]:focus {
+      color: blue;
+    }
+
+    .a[tabindex="1"]:hover {
+      color: red;
+    }
+
+    .a[tabindex="1"]:active {
+      color: green;
+    }
+
+
+    .a.c :nth-last-child(1){
+      color: red;
+    }
+
+    .a.c :nth-last-child(2){
+      color: green;
+    }
+
+
+    .a.c :nth-child(2){
+      color: blue;
+    }
+
+
+
 
     a[href^="mailto:"] {
       color: blue;
@@ -64,13 +70,46 @@
     .b :nth-child(4)> :nth-of-type(-n+25) {
       color: red;
     }
+    .b :nth-child(4)> :nth-of-type(n+35) {
+      color: blue;
+    }
+    .b :nth-child(4)> :nth-of-type(n+51) {
+      color: black;
+    }
+    .b :nth-child(4)> :nth-of-type(n+65) {
+      color: green;
+    }
+    .prime :nth-child(2)> :nth-of-type(n) {
+      color: pink;
+    }
+    .prime :nth-child(2)> :nth-of-type(2n) {
+      color: red;
+    }
+    .prime :nth-child(2)> :nth-of-type(3n) {
+      color: red;
+    }
+    .prime :nth-child(2)> :nth-of-type(5n) {
+      color: red;
+    }
+    .prime :nth-child(2)> :nth-of-type(2) {
+      color: pink;
+    }
+    .prime :nth-child(2)> :nth-of-type(3) {
+      color: pink;
+    }
+    .prime :nth-child(2)> :nth-of-type(5) {
+      color: pink;
+    }
+    .prime :nth-child(2)> :nth-of-type(1) {
+      color: black;
+    }
   </style>
 </head>
 
 <body>
   <p>红色</p>
 
-  <p id=p class="a" tabindex="1">鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
+  <p class="a" tabindex="1">鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
 
   <p class="a c">
     <span>
