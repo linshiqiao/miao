@@ -47,7 +47,7 @@
 
 
 
-    a[href^="mailto:"] {
+    a[href^="mailto:"i] {
       color: blue;
     }
 
@@ -67,41 +67,44 @@
       color: black;
     }
 
-    .b :nth-child(4)> :nth-of-type(-n+25) {
+    .b :nth-child(4) :nth-of-type(-n+25) {
       color: red;
     }
-    .b :nth-child(4)> :nth-of-type(n+35) {
+    .b :nth-child(4) :nth-of-type(n+35) {
       color: blue;
     }
-    .b :nth-child(4)> :nth-of-type(n+51) {
+    .b :nth-child(4) :nth-of-type(n+51) {
       color: black;
     }
     .b :nth-child(4)> :nth-of-type(n+65) {
       color: green;
     }
-    .prime :nth-child(2)> :nth-of-type(n) {
+    .prime :nth-child(2) :nth-of-type(n) {
       color: pink;
     }
-    .prime :nth-child(2)> :nth-of-type(2n) {
+    .prime :nth-child(2) :nth-of-type(2n) {
       color: red;
     }
-    .prime :nth-child(2)> :nth-of-type(3n) {
+    .prime :nth-child(2) :nth-of-type(3n) {
       color: red;
     }
-    .prime :nth-child(2)> :nth-of-type(5n) {
+    .prime :nth-child(2) :nth-of-type(5n) {
       color: red;
     }
-    .prime :nth-child(2)> :nth-of-type(2) {
+    .prime :nth-child(2) :nth-of-type(2) {
       color: pink;
     }
-    .prime :nth-child(2)> :nth-of-type(3) {
+    .prime :nth-child(2) :nth-of-type(3) {
       color: pink;
     }
-    .prime :nth-child(2)> :nth-of-type(5) {
+    .prime :nth-child(2) :nth-of-type(5) {
       color: pink;
     }
-    .prime :nth-child(2)> :nth-of-type(1) {
+    .prime :nth-child(2) :nth-of-type(1) {
       color: black;
+    }
+    .prime :nth-child(2) :nth-of-type(49) {
+      color: red;
     }
   </style>
 </head>
