@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    /* 只能在这里写css，不能改变页面的HTML结构 */
+    h1 {
+      font-size: m30px;
+      text-shadow:
+        0.5px 0.5px 0px grey,
+        1px 1px 0px grey,
+        1.5px 1.5px 0px grey,
+        2px 2px 0px grey,
+        2.5px 2.5px 0px grey;
+    }
+
+    body>h1 span {
+      color: blue;
+    }
+
+    h3 {
+
+      color: white;
+      font-size: 50px;
+
+      text-shadow:
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red,
+        0px 0px 1px red;
+    }
+
+    .b,
+    input {
+      font-size: 35px;
+    }
+
+    h2 {
+      font-variant: small-caps;
+      /*把小写字母显示成小号的大写字母*/
+      text-transform: capitalize;
+      /*每个单词的首字母大写*/
+      font-family: "comic sans ms", "comic sans", "宋体", "simsun", serif;
+      font-size: 25px;
+    }
+
+    h2+p {
+      text-align: right;
+      /*右对齐*/
+      font-style: italic;
+      /*改成斜体*/
+      font-size: 32px;
+    }
+
+    p b {
+      color: magenta;
+      text-decoration: underline red;
+      /*增加红色下划线*/
+
+    }
+
+    .a b:before {
+      content: "aaa ";
+
+    }
+
+    /*在b类型前加入文字aaa*/
+
+    .a b:after {
+      content: " aaa";
+
+    }
+
+    /*在b类型后加入文字aaa*/
+    .a b+span {
+      text-decoration: line-through;
+
+    }
+
+    /*把最后的span删掉*/
+    .d {
+      word-spacing: 10px;
+      /*单词间的间隔设置为10px*/
+      text-align: justify;
+      /*单两端对齐*/
+      letter-spacing: 5px;
+      /* 字母间的间隔为5px*/
+      text-indent: 2em;
+      line-height: 2em;
+    }
+
+    /* 文字缩进两个像素 */
+
+    .c span {
+      font-size: 1.5em;
+    }
+
+    /* 每个span里的大小变为1.5em */
+  </style>
+</head>
+
+<body>
+  <h1>大<span>喵</span>教育</h1>
+  <h3>大<span>喵</span>教育</h3>
+  <p class="b">
+    请输入序列号：<input placeholder="我的字号会跟外面一样大" type="text"> <br>
+  </p>
+  <h2>'Returnal' players need to take a break before a bug eats their save files '篝火'玩家需要在游戏的 bug 吃掉他们的存档之前先休息一下</h2>
+  <p class="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure <b><span>suscipit</span></b> doloremque
+    magnam delectus, reiciendis architecto ipsam nihil numquam <span>nesciunt sapiente, accusantium, dolore.</span>
+    Culpa repudiandae incidunt delectus. Officia, veritatis voluptas accusantium.</p>
+  <p class="d">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, autem, ad. Quos fugit quam, vitae
+    doloribus quo quisquam aut iure! Exercitationem ea in voluptatibus a, perspiciatis libero, eum quod? Et!</p>
+
+  <p class="c">
+    <span>aa <span>bb <span>cc <span></span>dd</span></span></span>
+  </p>
+
+</body>
+
+</html>
