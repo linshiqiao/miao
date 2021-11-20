@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <meta http-equiv="refresh" content="1"> -->
+  <meta http-equiv="refresh" content="1">
   <title>Document</title>
   <style>
     * {
@@ -98,6 +98,50 @@
       background-color: violet;
       text-align: center;
     }
+
+    #d2 {
+      width: 600px;
+      box-sizing: border-box;
+      /* background-color: pink; */
+
+    }
+
+    #d2 div {
+      width: 180px;
+      margin: 0px;
+      padding: 0px;
+      height: 40px;
+      background-color: pink;
+      border: 3px solid;
+      text-align: center;
+      line-height: 34px;
+      box-sizing: border-box;
+    }
+
+    #d2 div:nth-child(3n+1) {
+      display: inline-block;
+      /* margin-bottom: 15px; */
+      /* margin-left: 15px; */
+
+    }
+
+    #d2 div:nth-child(3n+2) {
+      display: inline-block;
+      /* margin-left: 30px; */
+      margin: 15px 0px 0 24px;
+    }
+
+    #d2 div:nth-child(3n+3) {
+      display: inline-block;
+      margin: 15px 0px 0 24px;
+    }
+
+    /* #d2 div:nth-child(-n+3) {
+      /* margin: 15px; */
+    /* margin-left: 15px; */
+    }
+
+    */
   </style>
 </head>
 
@@ -119,6 +163,20 @@
     <div>产品</div>
     <div>产品</div>
     <div>产品</div>
+    <div>产品</div>
+    <div>产品</div>
+  </div>
+  <div id="d2">
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
     <div>产品</div>
     <div>产品</div>
   </div>
