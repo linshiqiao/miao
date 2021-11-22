@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- <meta http-equiv="refresh" content="1"> -->
+  <title>JS Bin</title>
+</head>
+<style>
+  body {
+    margin: 0px;
+  }
+
+  .i {
+
+    padding: 0px;
+
+    width: 201px;
+    height: 30px;
+
+    border: 1px solid;
+  }
+
+  .i:hover {
+    background-color: rgb(218, 218, 218);
+  }
+
+  .o {
+    list-style: none;
+    /* margin: 0px;
+    padding-left: 15px; */
+    padding: 0px;
+    /* width: 300px;
+    padding-bottom: 25px; */
+    margin: 0px;
+    display: none;
+    position: absolute;
+    top: 10px;
+
+  }
+
+  /* * pre {
+    margin: 0px;
+  } */
+
+  .i:hover .o {
+
+    position: relative;
+
+    display: block;
+    /* border: 1px solid; */
+
+  }
+
+  .i:hover .o :nth-child(n):hover {
+    background-color: rgb(218, 218, 218);
+
+
+  }
+
+  .i:hover .o :nth-child(15):hover ul {
+    display: block;
+
+
+  }
+
+  .i:hover .o :nth-child(15):hover {
+    background-color: rgb(218, 218, 218);
+  }
+
+  .i:hover .o :nth-child(15):hover ul {
+    background-color: white;
+
+
+  }
+
+  .i:hover ul li {
+    width: 200px;
+    border: 1px solid;
+  }
+
+  .o li ul {
+    display: none;
+    list-style: none;
+  }
+
+  .o :nth-child(15):hover ul :nth-child(n):hover {
+    background-color: rgb(218, 218, 218);
+
+  }
+
+  .y {
+    position: absolute;
+    left: 202px;
+    top: 318px;
+    padding-left: 0px;
+  }
+</style>
+
+<body>
+  <div class="i">
+
+    文件(F)
+    <ul class="o">
+      <li>新建文件</li>
+      <li>新建窗口</li>
+      <li>打开文件</li>
+      <li>打开文件夹</li>
+      <li>从文件打开工作区</li>
+      <li>打开最近的文件</li>
+      <li>将文件夹添加到工作区</li>
+      <li>将工作区另存为</li>
+      <li>复制工作区</li>
+      <li>保存</li>
+      <li>另存为</li>
+      <li>全部保存</li>
+      <li>自动保存</li>
+      <li>首选项</li>
+      <li>还原文件
+        <ul class="y">
+          <li>设置</li>
+          <li>联机服务设置</li>
+          <li>遥测设置</li>
+          <li>扩展</li>
+          <li>键盘快捷方式</li>
+          <li>从-中迁移键盘快捷方式...</li>
+          <li>用户片段</li>
+          <li>颜色主题</li>
+          <li>文件图标主题</li>
+          <li>产品图标主题</li>
+          <li>打开设置同步</li>
+        </ul>
+      </li>
+      <li>关闭编辑器</li>
+      <li>关闭窗口</li>
+      <li>退出
+      <li>
+    </ul>
+
+  </div>
+
+
+</body>
+
+</html>
