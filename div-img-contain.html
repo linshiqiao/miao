@@ -62,12 +62,14 @@
     width: 300px;
     border: 1px solid;
   } */
-  img {
+
+
+  /* img {
     width: 500px;
     height: 500px;
     object-fit: scale-down;
     border: 2px solid;
-  }
+  } */
 
   /* object-fit 属性指定元素的内容应该如何去适应指定容器的高度与宽度。
   scale-down保持原有尺寸比例。内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。
@@ -76,6 +78,23 @@
   cover 	保持原有尺寸比例。但部分内容可能被剪切。
   fill 	默认，不保证保持原有的比例，内容拉伸填充整个内容容器。
   图片居中方法三：以上用object-fit */
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  div {
+    display: table-cell;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid;
+    margin: auto;
+  }
+
+  /* 图片居中方法四：以上用表格居中 */
 </style>
 
 <body>
@@ -87,9 +106,9 @@
   </div>
   <div>
     <img src="https://img2.baidu.com/it/u=1245691417,1303864728&fm=26&fmt=auto" alt="">
-    </div>
-    <div>
-      <img src="https://jsbin.com/favicon.ico" alt="">
+  </div>
+  <div>
+    <img src="https://jsbin.com/favicon.ico" alt="">
   </div>
 </body>
 
