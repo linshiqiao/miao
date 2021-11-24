@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <!-- <meta http-equiv="refresh" content="1"> -->
   <title>JS Bin</title>
 </head>
 <style>
@@ -13,57 +14,82 @@
     height: 100%;
   }
 
-  div {
-    height: 500px;
-    width: 500px;
+  /* div {
+    height: 300px;
+    width: 300px;
     border: 1px solid;
     position: relative;
     margin: auto;
-
   }
 
-  .pictures1 {
+  img {
     position: absolute;
-    top: 0px;
-    border: 1px solid;
-    left: 100px;
-    right: 100px;
-    bottom: 0px;
-    overflow: hidden;
-  }
-
-  .pictures2 {
-    position: absolute;
-    top: 100px;
-    border: 1px solid;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
     left: 0px;
     right: 0px;
-    bottom: 100px;
-    overflow: hidden;
+     top: 0px;
+    bottom: 0px;
+  } */
+  /*图片居中方法一：以上用绝对定位
+  元素中的文本的水平对齐方式。text-align: center; 把文本排列到中间
+  vertical-align: middle;把此元素放置在父元素的中部。  */
+  /* div {
+    height: 300px;
+    width: 300px;
+    border: 1px solid;
     text-align: center;
+
+    line-height: 300px;
+    font-size: 0px;
+
   }
 
-  .pictures3 {
-    position: absolute;
-    top: 100px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+
+  } */
+
+  /* 图片居中方法二：以上用文本居中
+   元素中的文本的水平对齐方式。text-align: center; 把文本排列到中间
+  vertical-align: middle;把此元素放置在父元素的中部。  */
+
+  /* div {
+    height: 300px;
+    width: 300px;
     border: 1px solid;
-    left: 100px;
-    right: 100px;
-    bottom: 100px;
-    overflow: hidden;
-    text-align: center;
+  } */
+  img {
+    width: 500px;
+    height: 500px;
+    object-fit: scale-down;
+    border: 2px solid;
   }
+
+  /* object-fit 属性指定元素的内容应该如何去适应指定容器的高度与宽度。
+  scale-down保持原有尺寸比例。内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。
+  none	保留原有元素内容的长度和宽度，也就是说内容不会被重置。
+  contain 保持原有尺寸比例。内容被缩放。
+  cover 	保持原有尺寸比例。但部分内容可能被剪切。
+  fill 	默认，不保证保持原有的比例，内容拉伸填充整个内容容器。
+  图片居中方法三：以上用object-fit */
 </style>
 
 <body>
   <div>
-    <aside class="pictures1"><img src="https://img0.baidu.com/it/u=379451365,2221459682&fm=26&fmt=auto" alt=""></aside>
+    <img src="https://img0.baidu.com/it/u=379451365,2221459682&fm=26&fmt=auto" alt=""></aside>
   </div>
   <div>
-    <aside class="pictures2"><img src="https://img1.baidu.com/it/u=3531424079,2707053250&fm=26&fmt=auto" alt=""></aside>
+    <img src="https://img1.baidu.com/it/u=3531424079,2707053250&fm=26&fmt=auto" alt="">
   </div>
   <div>
-    <aside class="pictures3"><img src="https://img2.baidu.com/it/u=1245691417,1303864728&fm=26&fmt=auto" alt=""></aside>
+    <img src="https://img2.baidu.com/it/u=1245691417,1303864728&fm=26&fmt=auto" alt="">
+    </div>
+    <div>
+      <img src="https://jsbin.com/favicon.ico" alt="">
   </div>
 </body>
 
