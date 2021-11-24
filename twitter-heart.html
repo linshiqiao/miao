@@ -13,24 +13,51 @@
     height: 100%;
   }
 
-  div {
+  label {
     background-image: url(web_heart_animation.png);
     background-repeat: no-repeat;
     height: 150px;
     width: 100px;
+    transition: none;
+    display: inline-block;
   }
 
-  div:hover {
 
-    transition: 5s steps(28);
+  input:checked+label {
+
+    transition: 1s steps(28);
     background-position: -2800px 0px;
-
   }
+
+  /* label {
+    margin: auto;
+    position: relative;
+    /border: 1px solid;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  img {
+    position: absolute;
+    left: 0px;
+    transition: none;
+  }
+
+  input:checked+label img {
+    left: -2800px;
+    transition: 0.4666666s linear;
+  } */
 </style>
 
 <body>
-  <div></div>
-  <aside></aside>
+  <input type="checkbox" id="heart" hidden>
+  <label for="heart"></label>
+  
+  <!-- <input type="checkbox" id="heart" hidden>
+      <label for="heart"><img src="web_heart_animation.png" alt=""></label> -->
+
 </body>
 
 </html>
