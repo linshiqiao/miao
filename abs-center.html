@@ -11,7 +11,7 @@
       margin: 0px;
     }
 
-    label {
+    /* label {
       position: relative;
       display: block;
       width: 200px;
@@ -36,7 +36,22 @@
 
     input:checked+label {
       background-color: rgb(160, 208, 224);
+    } */
+
+    div {
+      display: table-cell;
+      height: 100px;
+      width: 200px;
+      border: 1px solid;
+      vertical-align: bottom;
+      transition: 3s;
+      background-color: green;
     }
+    div:hover{
+      font-size: 200%;
+      background-color: aqua;
+    }
+    /* 单独用一个div移动用table类型 */
   </style>
 </head>
 
