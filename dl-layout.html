@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1">
+  <title>Document</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    /* body {
+      margin: 0px;
+      padding-left: 80px;
+    }
+
+
+    dd {
+      display: inline-block;
+      margin: 0px;
+    }
+
+    dt {
+      margin-top: 5px;
+      margin-bottom: -21px;
+    }
+
+    dt+dd {
+      margin-left: 40px;
+
+
+    } */
+
+    /* 第一种方法用inline-block修改margin 缺点dt后面如果没有dt会由于-margin和后面dt重叠 */
+
+    /* dd {
+      float: left;
+      margin: 0px;
+    }
+
+    dt {
+      clear: both;
+      margin-bottom: -21px;
+
+      position: relative;
+      left: -80px;
+
+    }
+
+    dd::before {
+      content: ',';
+    }
+
+    dt+dd::before {
+      content: none;
+    }
+    用浮动body设置padding-left dt margin-left过去 剩下的dd都留在body的padding里 */
+
+
+    /* body {
+      margin: 0px;
+      padding-left: 80px;
+    }
+
+
+    dl {
+      font-size: 0px;
+    }
+
+    dl * {
+      font-size: 16px;
+    }
+
+    dd {
+      xfloat: left;
+      margin: 0px;
+      display: inline;
+    }
+
+    dt {
+      clear: both;
+      margin-bottom: -21px;
+
+      position: relative;
+      left: -80px;
+
+    }
+
+    dd::before {
+      content: ', ';
+    }
+
+    dt+dd::before {
+      content: none;
+    }
+
+    用行内元素body设置padding-left dt margin-left过去 剩下的dd都留在body的padding里 */
+    /* dt,
+    dd {
+      float: left;
+    }
+
+    dt {
+      clear: both;
+      padding-bottom: 1px;
+    }
+
+    dd {
+      margin: 0px;
+    } */
+    /* 以上方法浮动只适合用在两行的dd上 */
+    dl {
+      padding-left: 80px;
+    }
+
+    dt,
+    dd {
+      float: left;
+    }
+
+    dt {
+      clear: both;
+      margin-left: -80px;
+      width: 80px;
+    }
+
+    dd {
+      margin: 0px;
+    }
+
+    */ dt+dd {
+      margin-left: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <dl>
+    <dt>导演</dt>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+
+    <dt>主演</dt>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+
+    <dt>主演</dt>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+
+    <dt>主演</dt>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+    <dd>谢霆锋</dd>
+  </dl>
+</body>
+
+</html>
