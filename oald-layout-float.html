@@ -5,10 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta http-equiv="refresh" content="1"> -->
+  <meta http-equiv="refresh" content="1">
   <title>Oald</title>
   <style>
-    body,.main {
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    /* body,.main {
       margin: 0px;
       width: 100%;
       height: 100%;
@@ -86,13 +91,7 @@
       text-align: right;
     }
 
-    /* .dictContent {
 
-      float: left;
-      width: calc(100% - 600px);
-
-
-    } */
     .dictContent{
       height: 100%;
       overflow: hidden;
@@ -110,12 +109,52 @@
       height: 90%;
       float: left;
 
+    } */
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+    body *{
+      height: 100%;
+    }
+
+    aside{
+      width: 200px;
+    }
+
+    .left{
+      float: left;
+      background-color: pink;
+    }
+    /* .left1{
+      float: left;
+      width: 100px;
+    } */
+    .right1,.right2{
+      float: right;
+      background-color: bisque;
+    }
+    main{
+      height: 100%;
+      overflow: hidden;
+      background-color: aqua;
+
+    }
+    .header{
+      height: 20%;
+      /* background-color: black; */
+      width: 100%;
+    }
+    .body{
+      background-color: burlywood;
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
-  <div class="main">
+  <!-- <div class="main">
     <div class="wordList">
       <h1>OALD Se7en</h1>
       <div>
@@ -226,13 +265,13 @@
       </ul>
     </div>
 
-<div class="vocabulary">
-  <h2>Vocabulary</h2>
+    <div class="vocabulary">
+      <h2>Vocabulary</h2>
 
-</div>
-<div class="history">
-  <h2>History</h2>
-</div>
+    </div>
+    <div class="history">
+      <h2>History</h2>
+    </div>
     <div class="dictContent">
       <div class="word">
         <h2>fantasy</h2>
@@ -256,6 +295,17 @@
         </ol>
       </div>
     </div>
+  </div> -->
+  <div>
+    <aside class="left">left</aside>
+    <!-- <aside class="left1">left1</aside> -->
+    <aside class="right1">right1</aside>
+    <aside class="right2">right2</aside>
+    <main>
+      <aside class="header">header</aside>
+      <aside class="body">body</aside>
+    </main>
+
   </div>
 </body>
 
