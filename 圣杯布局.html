@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>圣杯布局</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 700px;
+        }
+
+        .header,
+        .footer {
+            float: left;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgb(221, 221, 221);
+        }
+
+        .container {
+            padding: 0 220px 0 200px;
+        }
+
+        .middle,
+        .left,
+        .right {
+            float: left;
+            position: relative;
+            min-height: 300px;
+        }
+
+        .left {
+            width: 200px;
+
+            left: -100%;
+            margin-left: -200px;
+
+            background-color: rgb(255, 0, 0);
+        }
+
+        .right {
+            width: 220px;
+            right: -220px;
+            margin-left: -220px;
+            /* margin-left: -220px; */
+            /* left: -220px; */
+            /* margin-left: -220px; */
+            background-color: rgb(48, 164, 87);
+        }
+
+        .middle {
+            width: 100%;
+            background-color: rgb(26, 90, 205);
+        }
+
+        /* 使用相对定位left和right不影响他们之后元素的位置，之后元素位置受到margin影响 由于.left 受到-100%影响边界和主体左边界重合之后
+    由于margin-left -200px整个移动到上个元素padding位置，right由于leftmargin影响向左移动到之前left的位置，之后又由于marigin-left -200px影响移动到右边界和上个元素
+    右边界重叠之后再用right-220px移动到右边padding位置 */
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h4>header</h4>
+    </div>
+    <div class="container">
+        <div class="middle">
+            <h4>middle</h4>
+            <p>
+                这是页面的主体内容 这是页面的主体内容 这是页面的主体内容 这是页面的主体内容 这是页面的主体内容 这是页面的主体内容 这是页面的主体内容 这是页面的主体内容
+            </p>
+        </div>
+        <div class="left">
+            <h4>left</h4>
+            <p>
+                这是页面的左边 这是页面的左边 这是页面的左边 这是页面的左边 这是页面的左边 这是页面的左边
+            </p>
+        </div>
+        <div class="right">
+            <h4>right</h4>
+            <p>
+                这是页面的右边 这是页面的右边 这是页面的右边 这是页面的右边
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <h4>footer</h4>
+    </div>
+</body>
+
+</html>
