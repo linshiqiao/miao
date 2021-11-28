@@ -12,7 +12,7 @@
     margin: 0px;
   }
 
-  section {
+  /* section {
     width: 150px;
     height: 150px;
     margin: 5px;
@@ -34,11 +34,112 @@
   div:hover {
     border-color: red;
     position: relative;
+  } */
+/* ul{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 170px;
+  height: 170px;
+  border: 2px solid;
+  overflow: hidden;
+}
+ul li{
+  width: 50px;
+  height: 50px;
+  border: 5px solid blue;
+ float: left;
+  text-align: center;
+  line-height: 50px;
+  margin-right: -5px;
+  margin-bottom: -5px;
+
+}
+li:hover{
+  border-color: red;
+  position: relative;
+} */
+table{
+  margin-top: 50px;
+  text-align: center;
+  border-collapse: collapse;
+}
+col{
+  border: 5px solid blue;
+}
+tr{
+  border: 5px solid blue;
+}
+td{
+  width: 50px;
+  height: 50px;
+
+}
+td:hover{
+  border: 5px solid red;
+
+}
+/* ul{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  border: 1px solid;
+  overflow: hidden;
+  width: 165px;
+  xheight: 170px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+li{
+  width: 50px;
+  height: 50px;
+  border: 5px solid blue;
+  float: left;
+  margin-right: -5px;
+  margin-bottom: -5px;
+
+
+}
+li:hover{
+ border-color: red;
+ position: relative;
+} */
+/* border-collapse: collapse;适用于table里 在td设置属性优先级高于tr和col所以的覆盖颜色 table里 tbody的默认vertical-align是middle 所以只要放  text-align: center;水平居中就好 */
+ul{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  border: 1px solid;
+  overflow: hidden;
+  width: 170px;
+  height: 170px;
+  xpadding-bottom: 5px;
+  xpadding-right: 5px;
+  font-size: 0px;
+}
+a{
+  width: 50px;
+  height: 50px;
+  border: 5px solid blue;
+  /* float: left; */
+  display: inline-block;
+  margin-right: -5px;
+  margin-bottom: -5px;
+  font-size: 16px;
+
+}
+li{
+    display: inline-block;
+
   }
+a:hover{
+ border-color: red;
+ position: relative;
+}
 </style>
 
 <body>
-  <section>
+  <!-- <section>
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -48,7 +149,51 @@
     <div>7</div>
     <div>8</div>
     <div>9</div>
-  </section>
+  </section> -->
+  
+  <!-- <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+          </ul> -->
+  
+  <ul>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+  </ul>
+  <table>
+    <col>
+    <col>
+    <col>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
 </body>
 
 </html>
