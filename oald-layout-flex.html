@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="refresh" content="1">
+  <title>JS Bin</title>
+</head>
+<style>
+  /* body,
+  #top {
+    margin: 0;
+    height: 100%;
+  }
+
+  #top #body {
+    height: 100%;
+    min-width: 800px;
+  }
+
+  #top {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #top #body {
+    display: flex;
+  }
+
+  aside {
+    width: 200px;
+    background-color: chocolate;
+    height: 100vh;
+
+  }
+
+  #main {
+    flex-grow: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header {
+    height: 200px;
+    background-color: cornflowerblue;
+  }
+
+  #main2 {
+    flex-grow: 1;
+    background-color: crimson;
+  }
+
+  #right1 {
+    width: 200px;
+    background-color: yellow;
+    height: 100vh;
+  }
+
+  #right2 {
+    width: 200px;
+    background-color: pink;
+    height: 100vh;
+  } */
+  html,
+  body,
+  #top {
+    margin: 0;
+    height: 100%;
+  }
+
+  /* #top {
+    display: flex;
+    flex-direction: column wrap;
+  }
+
+  #aside {
+    width: 200px;
+    height: 100%;
+    background-color: aqua;
+    overflow: auto;
+    flex-shrink: 0;
+  }
+
+  #main {
+    flex-grow: 1;
+    background-color: pink;
+  }
+
+  #header {
+    height: 100px;
+    width: 100%;
+    background-color: cornflowerblue;
+    flex-shrink: 0;
+    overflow: auto;
+  }
+
+  #main2 {
+    flex-grow: 1;
+
+    background-color: green;
+    overflow: auto;
+    height: calc(100% - 100px);
+  }
+
+  #right1,
+  #right2 {
+    width: 200px;
+    height: 100%;
+
+    flex-shrink: 0;
+  }
+
+  #right1 {
+    background-color: burlywood;
+    overflow: auto;
+  }
+
+  #right2 {
+    background-color: coral;
+    overflow: auto;
+  } */
+  /* flex方法一用calc */
+  #top {
+    display: flex;
+  }
+
+  #aside {
+    width: 200px;
+    height: 100%;
+    background-color: aqua;
+    overflow: auto;
+    flex-shrink: 0;
+  }
+
+  #main {
+    flex-grow: 1;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header {
+    height: 100px;
+    width: 100%;
+    background-color: cornflowerblue;
+    flex-shrink: 0;
+    overflow: auto;
+  }
+
+  #main2 {
+    flex-grow: 1;
+
+    background-color: green;
+    overflow: auto;
+
+  }
+
+  #right1,
+  #right2 {
+    width: 200px;
+    height: 100%;
+
+    flex-shrink: 0;
+  }
+
+  #right1 {
+    background-color: burlywood;
+    overflow: auto;
+  }
+
+  #right2 {
+    background-color: coral;
+    overflow: auto;
+  }
+
+  /* 方法二中间用flex分成上下两个 */
+</style>
+
+<body>
+  <div id="top">
+    <!-- <div id="body"> -->
+    <aside id="aside">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque exercitationem ipsa dolor
+      animi dolorem excepturi, cum laborum perferendis libero dolorum, facere repudiandae id? Error ipsa inventore
+      provident consequuntur porro.
+      Distinctio quidem praesentium eius, adipisci deleniti omnis natus deserunt architecto error amet dolores, laborum
+      repellat? Magnam eaque aut, provident, facere eius vero tempora nostrum pariatur id similique doloribus quis quia.
+      Amet eum illo ab delectus ad assumenda possimus voluptas minima doloremque corporis praesentium sit voluptatibus
+      aspernatur quidem inventore unde totam in quae cupiditate, rem mollitia eligendi. Vitae ut perferendis totam!
+      Nobis inventore nihil dolore ducimus autem sit consequatur accusantium animi beatae quisquam itaque minus fugiat
+      nesciunt repudiandae similique, dolorem totam expedita. Illo corrupti voluptates provident modi dolorem
+      exercitationem, veniam assumenda?
+      Vero repudiandae, quidem eligendi inventore blanditiis maiores animi perspiciatis corporis sit voluptatem
+      excepturi libero, fuga hic asperiores sed similique nesciunt quos iusto. Necessitatibus quam illum deserunt
+      commodi eligendi, molestiae earum.</aside>
+    <div id="main">
+      <div id="header">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id omnis minima commodi pariatur nihil
+        atque optio ab veniam, adipisci quam dolores, ex minus molestiae rem aliquam reprehenderit provident odio nisi.
+        Dignissimos, non amet at dolores facilis laborum eum suscipit eveniet voluptatum labore? Necessitatibus
+        architecto facilis sed. Est, voluptates, assumenda repellat optio omnis harum, iure magnam porro cum fuga
+        incidunt facilis!</div>
+      <div id="main2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laudantium tenetur natus dolorum
+        fugit facere possimus culpa odio alias fugiat? Maiores nihil suscipit inventore a. Recusandae odit officiis
+        laudantium tenetur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, laboriosam? Ipsam
+        exercitationem
+        expedita excepturi at ratione harum ex beatae distinctio sint, quo, sit incidunt, iste nam cupiditate dolor
+        optio corporis?
+        Cupiditate, rem id et saepe maiores commodi qui veniam voluptatibus, corporis, ratione est voluptas eum sapiente
+        nobis quas autem numquam amet nam animi quaerat molestias recusandae dolore! Labore, minus perspiciatis.
+        Facere minima fugiat iusto veniam consequuntur repellat provident vero ut, eaque aliquam omnis sit ea.
+        Explicabo, culpa repellat omnis eligendi atque, perferendis sunt at dolorem quidem voluptas esse quam soluta?
+        Accusantium architecto assumenda delectus? Ab qui laborum quae architecto esse unde dolore quibusdam. Corporis
+        sed laborum vero atque id aliquid. Laudantium ab, incidunt in expedita accusamus numquam eius soluta
+        suscipit!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, laboriosam? Ipsam exercitationem
+        expedita excepturi at ratione harum ex beatae distinctio sint, quo, sit incidunt, iste nam cupiditate dolor
+        optio corporis?
+        Cupiditate, rem id et saepe maiores commodi qui veniam voluptatibus, corporis, ratione est voluptas eum sapiente
+        nobis quas autem numquam amet nam animi quaerat molestias recusandae dolore! Labore, minus perspiciatis.
+        Facere minima fugiat iusto veniam consequuntur repellat provident vero ut, eaque aliquam omnis sit ea.
+        Explicabo, culpa repellat omnis eligendi atque, perferendis sunt at dolorem quidem voluptas esse quam soluta?
+        Accusantium architecto assumenda delectus? Ab qui laborum quae architecto esse unde dolore quibusdam. Corporis
+        sed laborum vero atque id aliquid. Laudantium ab, incidunt in expedita accusamus numquam eius soluta
+        suscipit!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, laboriosam? Ipsam exercitationem
+        expedita excepturi at ratione harum ex beatae distinctio sint, quo, sit incidunt, iste nam cupiditate dolor
+        optio corporis?
+        Cupiditate, rem id et saepe maiores commodi qui veniam voluptatibus, corporis, ratione est voluptas eum sapiente
+        nobis quas autem numquam amet nam animi quaerat molestias recusandae dolore! Labore, minus perspiciatis.
+        Facere minima fugiat iusto veniam consequuntur repellat provident vero ut, eaque aliquam omnis sit ea.
+        Explicabo, culpa repellat omnis eligendi atque, perferendis sunt at dolorem quidem voluptas esse quam soluta?
+        Accusantium architecto assumenda delectus? Ab qui laborum quae architecto esse unde dolore quibusdam. Corporis
+        sed laborum vero atque id aliquid. Laudantium ab, incidunt in expedita accusamus numquam eius soluta suscipit!
+      </div>
+    </div>
+    <div id="right1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque exercitationem ipsa dolor
+      animi dolorem excepturi, cum laborum perferendis libero dolorum, facere repudiandae id? Error ipsa inventore
+      provident consequuntur porro.
+      Distinctio quidem praesentium eius, adipisci deleniti omnis natus deserunt architecto error amet dolores, laborum
+      repellat? Magnam eaque aut, provident, facere eius vero tempora nostrum pariatur id similique doloribus quis quia.
+      Amet eum illo ab delectus ad assumenda possimus voluptas minima doloremque corporis praesentium sit voluptatibus
+      aspernatur quidem inventore unde totam in quae cupiditate, rem mollitia eligendi. Vitae ut perferendis totam!
+      Nobis inventore nihil dolore ducimus autem sit consequatur accusantium animi beatae quisquam itaque minus fugiat
+      nesciunt repudiandae similique, dolorem totam expedita. Illo corrupti voluptates provident modi dolorem
+      exercitationem, veniam assumenda?
+      Vero repudiandae, quidem eligendi inventore blanditiis maiores animi perspiciatis corporis sit voluptatem
+      excepturi libero, fuga hic asperiores sed similique nesciunt quos iusto. Necessitatibus quam illum deserunt
+      commodi eligendi, molestiae earum.</div>
+    <div id="right2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cumque exercitationem ipsa dolor
+      animi dolorem excepturi, cum laborum perferendis libero dolorum, facere repudiandae id? Error ipsa inventore
+      provident consequuntur porro.
+      Distinctio quidem praesentium eius, adipisci deleniti omnis natus deserunt architecto error amet dolores, laborum
+      repellat? Magnam eaque aut, provident, facere eius vero tempora nostrum pariatur id similique doloribus quis quia.
+      Amet eum illo ab delectus ad assumenda possimus voluptas minima doloremque corporis praesentium sit voluptatibus
+      aspernatur quidem inventore unde totam in quae cupiditate, rem mollitia eligendi. Vitae ut perferendis totam!
+      Nobis inventore nihil dolore ducimus autem sit consequatur accusantium animi beatae quisquam itaque minus fugiat
+      nesciunt repudiandae similique, dolorem totam expedita. Illo corrupti voluptates provident modi dolorem
+      exercitationem, veniam assumenda?
+      Vero repudiandae, quidem eligendi inventore blanditiis maiores animi perspiciatis corporis sit voluptatem
+      excepturi libero, fuga hic asperiores sed similique nesciunt quos iusto. Necessitatibus quam illum deserunt
+      commodi eligendi, molestiae earum.</div>
+    <!-- </div> -->
+    <!-- <div id="footer"></div> -->
+  </div>
+</body>
+
+</html>
