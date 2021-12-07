@@ -5,61 +5,151 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="1">
   <title>Document</title>
   <style>
     body {
-      margin: 0px;
+      margin: 0;
+      height: 100%;
     }
 
-    /* label {
-      position: relative;
-      display: block;
+    #plan1 {
       width: 200px;
-      height: 100px;
-      background-color: green;
-      border-bottom: 3px solid red;
-    }
-
-    div {
-      transition: 3s linear;
-      word-wrap: break-word;
-      position: relative;
-      top: 80px;
-      vertical-align: bottom;
-
-    }
-
-    input:checked+label div {
-      font-size: 50px;
-      top: 30px
-    }
-
-    input:checked+label {
-      background-color: rgb(160, 208, 224);
-    } */
-
-    div {
-      display: table-cell;
-      height: 100px;
-      width: 200px;
+      height: 200px;
       border: 1px solid;
-      vertical-align: bottom;
-      transition: 3s;
-      background-color: green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
     }
-    div:hover{
-      font-size: 200%;
+
+    #plan1 * {
+      height: 50px;
+      width: 50px;
       background-color: aqua;
     }
-    /* 单独用一个div移动用table类型 */
+
+    /* 第一种方法用flex   align-items: center;justify-content: center; */
+    #plan2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+      position: relative;
+    }
+
+    #plan2 * {
+      height: 50px;
+      width: 50px;
+      background-color: pink;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    /* 第二种方法用绝对定位 四周变为0 margin变成auto调到中间 */
+    #plan3 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+
+      display: table-cell;
+      vertical-align: middle;
+
+    }
+
+    #plan3 * {
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      margin: auto;
+    }
+
+    /* 第三种用表格居中 */
+    #plan4 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+      margin-top: 50px;
+      display: flex;
+
+
+    }
+
+    #plan4 * {
+
+      height: 50px;
+      width: 50px;
+      background-color: yellow;
+      margin: auto;
+
+    }
+
+    /* 第四种用flex居中子元素s设置宽高四周设置margin: auto; */
+    #plan5 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+      margin-top: 50px;
+      text-align: center;
+
+    }
+
+    #plan5 * {
+
+
+      line-height: 200px;
+      background-color: green;
+    }
+
+    /* 第五种用文字line-height: 200px;text-align: center;居中*/
+    #plan6 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+      margin-top: 50px;
+      position: relative;
+
+    }
+
+    #plan6 * {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 第六种用先让父元素定位后让子元素移动50%，由于移动50%左上角居中，然后用transform: translate(-50%, -50%);
+    让自身移动自身宽度高度的50%居中*/
   </style>
 </head>
 
 <body>
-  <input type="checkbox" id="check" hidden>
-  <label for="check">
-    <div>订阅播客</div>
-  </label>
+  <div id="plan1">
+    <aside></aside>
+  </div>
+  <div id="plan2">
+    <aside></aside>
+  </div>
+  <div id="plan3">
+    <aside></aside>
+  </div>
+  <div id="plan4">
+    <aside></aside>
+  </div>
+  <div id="plan5">
+    <span>aa</span>
+  </div>
+  <div id="plan6">
+    <aside></aside>
+  </div>
 </body>
 
 </html>
