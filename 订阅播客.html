@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    /* label {
+      position: relative;
+      display: block;
+      width: 200px;
+      height: 100px;
+      background-color: green;
+      border-bottom: 3px solid red;
+    }
+
+    div {
+      transition: 3s linear;
+      word-wrap: break-word;
+      position: relative;
+      top: 80px;
+      vertical-align: bottom;
+
+    }
+
+    input:checked+label div {
+      font-size: 50px;
+      top: 30px
+    }
+
+    input:checked+label {
+      background-color: rgb(160, 208, 224);
+    } */
+
+    div {
+      display: table-cell;
+      height: 100px;
+      width: 200px;
+      border: 1px solid;
+      vertical-align: bottom;
+      transition: 3s;
+      background-color: green;
+    }
+    div:hover{
+      font-size: 200%;
+      background-color: aqua;
+    }
+    /* 单独用一个div移动用table类型 */
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="check" hidden>
+  <label for="check">
+    <div>订阅播客</div>
+  </label>
+</body>
+
+</html>

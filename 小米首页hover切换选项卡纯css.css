@@ -1,0 +1,48 @@
+* {
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 1px red;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+html main,
+body main {
+  height: 300px;
+  position: relative;
+}
+html main div:hover span,
+body main div:hover span {
+  color: black;
+  transition: none;
+}
+html main div:hover span section,
+body main div:hover span section {
+  visibility: hidden;
+  transition: none;
+}
+html main div span,
+body main div span {
+  float: right;
+  margin-right: 10px;
+}
+html main div span section,
+body main div span section {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 22px;
+  bottom: 0px;
+}
+html main div span:hover,
+body main div span:hover {
+  color: red;
+  transition: none;
+}
+html main div span:hover section,
+body main div span:hover section {
+  visibility: visible;
+  transition: none;
+}

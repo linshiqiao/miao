@@ -1,0 +1,133 @@
+x* {
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 1px red;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+html #Slideshow,
+body #Slideshow {
+  width: 1000px;
+  height: 460px;
+  position: relative;
+  cursor: pointer;
+}
+html #Slideshow input,
+body #Slideshow input {
+  display: none;
+}
+html #Slideshow input:nth-child(1):checked ~ .Slides .Slide:nth-child(1) img,
+body #Slideshow input:nth-child(1):checked ~ .Slides .Slide:nth-child(1) img,
+html #Slideshow input:nth-child(2):checked ~ .Slides .Slide:nth-child(2) img,
+body #Slideshow input:nth-child(2):checked ~ .Slides .Slide:nth-child(2) img,
+html #Slideshow input:nth-child(3):checked ~ .Slides .Slide:nth-child(3) img,
+body #Slideshow input:nth-child(3):checked ~ .Slides .Slide:nth-child(3) img,
+html #Slideshow input:nth-child(4):checked ~ .Slides .Slide:nth-child(4) img,
+body #Slideshow input:nth-child(4):checked ~ .Slides .Slide:nth-child(4) img {
+  opacity: 1;
+}
+html #Slideshow input:nth-child(1):checked ~ .Slides .Slide:nth-child(1) label,
+body #Slideshow input:nth-child(1):checked ~ .Slides .Slide:nth-child(1) label,
+html #Slideshow input:nth-child(2):checked ~ .Slides .Slide:nth-child(2) label,
+body #Slideshow input:nth-child(2):checked ~ .Slides .Slide:nth-child(2) label,
+html #Slideshow input:nth-child(3):checked ~ .Slides .Slide:nth-child(3) label,
+body #Slideshow input:nth-child(3):checked ~ .Slides .Slide:nth-child(3) label,
+html #Slideshow input:nth-child(4):checked ~ .Slides .Slide:nth-child(4) label,
+body #Slideshow input:nth-child(4):checked ~ .Slides .Slide:nth-child(4) label {
+  z-index: 9;
+  display: block;
+  cursor: pointer;
+}
+html #Slideshow input:nth-child(1):checked ~ .show :nth-child(1),
+body #Slideshow input:nth-child(1):checked ~ .show :nth-child(1),
+html #Slideshow input:nth-child(2):checked ~ .show :nth-child(2),
+body #Slideshow input:nth-child(2):checked ~ .show :nth-child(2),
+html #Slideshow input:nth-child(3):checked ~ .show :nth-child(3),
+body #Slideshow input:nth-child(3):checked ~ .show :nth-child(3),
+html #Slideshow input:nth-child(4):checked ~ .show :nth-child(4),
+body #Slideshow input:nth-child(4):checked ~ .show :nth-child(4) {
+  background-color: white;
+}
+html #Slideshow .Slides,
+body #Slideshow .Slides {
+  height: 100%;
+  position: relative;
+}
+html #Slideshow .Slides .Slide,
+body #Slideshow .Slides .Slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+html #Slideshow .Slides .Slide label,
+body #Slideshow .Slides .Slide label {
+  position: absolute;
+  height: 70px;
+  width: 40px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+html #Slideshow .Slides .Slide label:first-child,
+body #Slideshow .Slides .Slide label:first-child {
+  left: 0;
+}
+html #Slideshow .Slides .Slide label:first-child::before,
+body #Slideshow .Slides .Slide label:first-child::before {
+  content: '<';
+  font-size: 50px;
+  color: #d0d2d6;
+}
+html #Slideshow .Slides .Slide label:first-child::before:hover,
+body #Slideshow .Slides .Slide label:first-child::before:hover {
+  color: white;
+}
+html #Slideshow .Slides .Slide label:nth-child(2),
+body #Slideshow .Slides .Slide label:nth-child(2) {
+  right: 0;
+}
+html #Slideshow .Slides .Slide label:nth-child(2)::before,
+body #Slideshow .Slides .Slide label:nth-child(2)::before {
+  content: '>';
+  font-size: 50px;
+  color: #d0d2d6;
+}
+html #Slideshow .Slides .Slide label:nth-child(2)::before:hover,
+body #Slideshow .Slides .Slide label:nth-child(2)::before:hover {
+  color: white;
+}
+html #Slideshow .Slides .Slide label:hover,
+body #Slideshow .Slides .Slide label:hover {
+  background-color: #5f646b;
+}
+html #Slideshow .Slides .Slide img,
+body #Slideshow .Slides .Slide img {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s;
+  top: 0;
+}
+html #Slideshow .show,
+body #Slideshow .show {
+  position: absolute;
+  bottom: 25px;
+  right: 35px;
+}
+html #Slideshow .show label,
+body #Slideshow .show label {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  border: 2px solid black;
+  float: left;
+  display: inline-block;
+  margin: 5px;
+}
+html #Slideshow .show label:hover,
+body #Slideshow .show label:hover {
+  background-color: white;
+  cursor: pointer;
+}

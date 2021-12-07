@@ -1,0 +1,424 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  min-width: 600px;
+}
+html #top,
+body #top {
+  height: 40px;
+  background-color: black;
+}
+html #top #header,
+body #top #header {
+  margin: 0;
+  width: 1226px;
+  margin: auto;
+  padding: 0;
+  cursor: pointer;
+}
+html #top #header ul#top2,
+body #top #header ul#top2 {
+  list-style: none;
+  height: 40px;
+  background-color: black;
+  padding: 0;
+  font-size: 0;
+  line-height: 40px;
+}
+html #top #header ul#top2 li,
+body #top #header ul#top2 li {
+  margin: auto;
+  display: inline-block;
+  color: #b0b0b0;
+  font-size: 12px;
+  position: relative;
+  padding-right: 17px;
+  box-sizing: border-box;
+}
+html #top #header ul#top2 li a,
+body #top #header ul#top2 li a {
+  text-decoration: none;
+  color: #b0b0b0;
+}
+html #top #header ul#top2 li a:hover,
+body #top #header ul#top2 li a:hover {
+  color: white;
+}
+html #top #header ul#top2 li:hover,
+body #top #header ul#top2 li:hover {
+  color: white;
+}
+html #top #header ul#top2 li:nth-child(11):hover section a div,
+body #top #header ul#top2 li:nth-child(11):hover section a div {
+  display: block;
+}
+html #top #header ul#top2 li:nth-child(11) section,
+body #top #header ul#top2 li:nth-child(11) section {
+  position: absolute;
+  margin: 0;
+}
+html #top #header ul#top2 li:nth-child(11) section a div,
+body #top #header ul#top2 li:nth-child(11) section a div {
+  width: 125px;
+  height: 150px;
+  margin-top: -3px;
+  background-color: white;
+  box-shadow: 0 0 1px 0 black;
+  position: relative;
+  left: -40px;
+  background-image: url(QQ图片20211203100936.png);
+  z-index: 10;
+  display: none;
+}
+html #top #header ul#top2 li:nth-child(13),
+body #top #header ul#top2 li:nth-child(13) {
+  margin-right: 140px;
+}
+html #top #header ul#top2 li:nth-child(16),
+body #top #header ul#top2 li:nth-child(16) {
+  padding-right: 25px;
+}
+html #top #header ul#top2 li:last-child,
+body #top #header ul#top2 li:last-child {
+  width: 111px;
+  height: 40px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #424242;
+}
+html #top #header ul#top2 li:last-child:hover ul li,
+body #top #header ul#top2 li:last-child:hover ul li {
+  display: block;
+  transition: 1s;
+  height: 100px;
+  opacity: 1;
+}
+html #top #header ul#top2 li:last-child ul,
+body #top #header ul#top2 li:last-child ul {
+  position: relative;
+}
+html #top #header ul#top2 li:last-child ul li,
+body #top #header ul#top2 li:last-child ul li {
+  width: 315px;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+  left: -204px;
+  background-color: white;
+  z-index: 10;
+  top: -2px;
+  box-shadow: 0 0 1px 0 black;
+  color: black;
+  margin: auto;
+  line-height: 100px;
+  transition: 1s;
+}
+html #top #header ul#top2 li:last-child ul li:hover,
+body #top #header ul#top2 li:last-child ul li:hover {
+  color: black;
+}
+html #top #header ul#top2 li:last-child:hover,
+body #top #header ul#top2 li:last-child:hover {
+  background-color: white;
+  color: #ff9147;
+}
+html #top #header ul#top3,
+body #top #header ul#top3 {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  position: relative;
+  line-height: 100px;
+  font-size: 0;
+}
+html #top #header ul#top3 > li img,
+body #top #header ul#top3 > li img {
+  width: 55px;
+  height: 55px;
+  vertical-align: middle;
+}
+html #top #header ul#top3 li,
+body #top #header ul#top3 li {
+  display: inline-block;
+  font-size: 16px;
+}
+html #top #header ul#top3 li:hover,
+body #top #header ul#top3 li:hover {
+  color: red;
+}
+html #top #header ul#top3 li:first-child,
+body #top #header ul#top3 li:first-child {
+  margin-right: 185px;
+}
+html #top #header ul#top3 li:nth-child(n+2),
+body #top #header ul#top3 li:nth-child(n+2) {
+  margin-right: 20px;
+}
+html #top #header ul#top3 li:nth-last-child(3),
+body #top #header ul#top3 li:nth-last-child(3) {
+  margin-right: 110px;
+}
+html #top #header ul#top3 li:nth-last-child(2),
+body #top #header ul#top3 li:nth-last-child(2) {
+  margin-right: 0;
+}
+html #top #header ul#top3 li:nth-last-child(2) input,
+body #top #header ul#top3 li:nth-last-child(2) input {
+  width: 239px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0;
+}
+html #top #header ul#top3 li:last-child,
+body #top #header ul#top3 li:last-child {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  top: 26px;
+  margin: 0;
+}
+html #top #header ul#top3 li:last-child:hover,
+body #top #header ul#top3 li:last-child:hover {
+  color: white;
+  background-color: #ff6700;
+}
+html #top #body,
+body #top #body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+html #top #body #body1,
+body #top #body #body1 {
+  margin: 0;
+  width: 1226px;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  height: 100%;
+}
+html #top #body #body1 > ul:first-child,
+body #top #body #body1 > ul:first-child {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  width: 235px;
+  height: 460px;
+  background-color: #9196a1;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  float: left;
+  left: 0;
+}
+html #top #body #body1 > ul:first-child > li,
+body #top #body #body1 > ul:first-child > li {
+  position: relative;
+  padding-left: 30px;
+  height: 42px;
+  line-height: 42px;
+  color: white;
+  box-sizing: border-box;
+}
+html #top #body #body1 > ul:first-child > li:first-child,
+body #top #body #body1 > ul:first-child > li:first-child {
+  margin-top: 20px;
+}
+html #top #body #body1 > ul:first-child > li:first-child:hover ul,
+body #top #body #body1 > ul:first-child > li:first-child:hover ul {
+  display: block;
+}
+html #top #body #body1 > ul:first-child > li:first-child:hover ul li:hover,
+body #top #body #body1 > ul:first-child > li:first-child:hover ul li:hover {
+  color: red;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul,
+body #top #body #body1 > ul:first-child > li:first-child ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 991px;
+  height: 460px;
+  background-color: white;
+  z-index: 11;
+  margin-left: 205px;
+  margin-top: -63px;
+  box-shadow: 0 0 1px 0 black;
+  display: none;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li,
+body #top #body #body1 > ul:first-child > li:first-child ul li {
+  height: 76.666px;
+  width: 247.75px;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 76.666px;
+  color: black;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li img,
+body #top #body #body1 > ul:first-child > li:first-child ul li img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(-n+6),
+body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(-n+6) {
+  padding-left: 28px;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+7),
+body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+7) {
+  margin-left: 247.75px;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+13),
+body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+13) {
+  margin-left: 495.5px;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+19),
+body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+19) {
+  margin-left: 743.25px;
+}
+html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(6n+7),
+body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(6n+7) {
+  margin-top: -460px;
+}
+html #top #body #body1 > ul:first-child > li:last-child,
+body #top #body #body1 > ul:first-child > li:last-child {
+  margin-bottom: 20px;
+}
+html #top #body #body1 > ul:first-child > li:hover,
+body #top #body #body1 > ul:first-child > li:hover {
+  background-color: #ff6700;
+}
+html #top #body #body1 #body2,
+body #top #body #body1 #body2 {
+  width: 991px;
+  height: 460px;
+  position: relative;
+  display: inline-block;
+}
+html #top #body #body1 #body2 .check,
+body #top #body #body1 #body2 .check,
+html #top #body #body1 #body2 #checked,
+body #top #body #body1 #body2 #checked {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+html #top #body #body1 #body2 .check label,
+body #top #body #body1 #body2 .check label,
+html #top #body #body1 #body2 #checked label,
+body #top #body #body1 #body2 #checked label {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  line-height: 70px;
+}
+html #top #body #body1 #body2 .check label:first-child,
+body #top #body #body1 #body2 .check label:first-child,
+html #top #body #body1 #body2 #checked label:first-child,
+body #top #body #body1 #body2 #checked label:first-child {
+  left: 0;
+  font-size: 2em;
+  color: #bbc4cb;
+}
+html #top #body #body1 #body2 .check label:first-child:hover,
+body #top #body #body1 #body2 .check label:first-child:hover,
+html #top #body #body1 #body2 #checked label:first-child:hover,
+body #top #body #body1 #body2 #checked label:first-child:hover {
+  color: white;
+  background-color: #4b5e6c;
+}
+html #top #body #body1 #body2 .check label:nth-child(2),
+body #top #body #body1 #body2 .check label:nth-child(2),
+html #top #body #body1 #body2 #checked label:nth-child(2),
+body #top #body #body1 #body2 #checked label:nth-child(2) {
+  right: 0;
+  color: #bbc4cb;
+  font-size: 2em;
+}
+html #top #body #body1 #body2 .check label:nth-child(2):hover,
+body #top #body #body1 #body2 .check label:nth-child(2):hover,
+html #top #body #body1 #body2 #checked label:nth-child(2):hover,
+body #top #body #body1 #body2 #checked label:nth-child(2):hover {
+  color: white;
+  background-color: #4b5e6c;
+}
+html #top #body #body1 #body2 .check img,
+body #top #body #body1 #body2 .check img,
+html #top #body #body1 #body2 #checked img,
+body #top #body #body1 #body2 #checked img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+}
+html #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) img,
+body #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) img,
+html #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) img,
+body #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) img,
+html #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) img,
+body #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) img,
+html #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) img,
+body #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) img {
+  opacity: 1;
+  transition: 1s;
+}
+html #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) label,
+body #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) label,
+html #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) label,
+body #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) label,
+html #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) label,
+body #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) label,
+html #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) label,
+body #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) label {
+  z-index: 9;
+}
+html #top #body #body1 #body2 > input:nth-child(1):checked ~ .buttom :nth-child(1),
+body #top #body #body1 #body2 > input:nth-child(1):checked ~ .buttom :nth-child(1),
+html #top #body #body1 #body2 > input:nth-child(2):checked ~ .buttom :nth-child(2),
+body #top #body #body1 #body2 > input:nth-child(2):checked ~ .buttom :nth-child(2),
+html #top #body #body1 #body2 > input:nth-child(3):checked ~ .buttom :nth-child(3),
+body #top #body #body1 #body2 > input:nth-child(3):checked ~ .buttom :nth-child(3),
+html #top #body #body1 #body2 > input:nth-child(4):checked ~ .buttom :nth-child(4),
+body #top #body #body1 #body2 > input:nth-child(4):checked ~ .buttom :nth-child(4) {
+  background-color: white;
+}
+html #top #body #body1 #body2 .buttom,
+body #top #body #body1 #body2 .buttom {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+html #top #body #body1 #body2 .buttom label,
+body #top #body #body1 #body2 .buttom label {
+  width: 6px;
+  height: 6px;
+  border: 2px solid #728193;
+  border-radius: 9999px;
+  position: relative;
+  float: left;
+  left: 89%;
+  top: 92%;
+  margin-left: 8px;
+}
+html #top #body #body1 #channel-list,
+body #top #body #body1 #channel-list {
+  width: 235px;
+  height: 170px;
+}
