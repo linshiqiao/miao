@@ -1,201 +1,259 @@
-html,
+x* {
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 1px red;
+}
 body {
   margin: 0;
-  height: 100%;
-  min-width: 600px;
+  font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  overflow-y: scroll;
 }
-html #top,
-body #top {
-  height: 40px;
-  background-color: black;
-}
-html #top #header,
-body #top #header {
-  margin: 0;
-  width: 1226px;
-  margin: auto;
-  padding: 0;
-  cursor: pointer;
-}
-html #top #header ul#top2,
-body #top #header ul#top2 {
+ul {
   list-style: none;
-  height: 40px;
-  background-color: black;
   padding: 0;
-  font-size: 0;
-  line-height: 40px;
+  margin: 0;
 }
-html #top #header ul#top2 li,
-body #top #header ul#top2 li {
-  margin: auto;
-  display: inline-block;
-  color: #b0b0b0;
-  font-size: 12px;
-  position: relative;
-  padding-right: 17px;
-  box-sizing: border-box;
-}
-html #top #header ul#top2 li a,
-body #top #header ul#top2 li a {
+a {
   text-decoration: none;
-  color: #b0b0b0;
 }
-html #top #header ul#top2 li a:hover,
-body #top #header ul#top2 li a:hover {
+.clearfix div a:hover {
   color: white;
 }
-html #top #header ul#top2 li:hover,
-body #top #header ul#top2 li:hover {
-  color: white;
-}
-html #top #header ul#top2 li:nth-child(11):hover section a div,
-body #top #header ul#top2 li:nth-child(11):hover section a div {
+.clearfix::after {
+  content: '';
   display: block;
+  clear: both;
 }
-html #top #header ul#top2 li:nth-child(11) section,
-body #top #header ul#top2 li:nth-child(11) section {
-  position: absolute;
-  margin: 0;
+@font-face {
+  font-family: icon;
+  src: url(mi.woff);
+  font-weight: 400;
 }
-html #top #header ul#top2 li:nth-child(11) section a div,
-body #top #header ul#top2 li:nth-child(11) section a div {
-  width: 125px;
-  height: 150px;
-  margin-top: -3px;
-  background-color: white;
-  box-shadow: 0 0 1px 0 black;
-  position: relative;
-  left: -40px;
-  background-image: url(QQ图片20211203100936.png);
-  z-index: 10;
-  display: none;
+@font-face {
+  font-family: IconFont;
+  src: url(font-awesome-4.7.0/fonts/fontawesome-webfont.ttf);
+  font-weight: 400;
 }
-html #top #header ul#top2 li:nth-child(13),
-body #top #header ul#top2 li:nth-child(13) {
-  margin-right: 140px;
+[IconFont] {
+  font-family: IconFont;
 }
-html #top #header ul#top2 li:nth-child(16),
-body #top #header ul#top2 li:nth-child(16) {
-  padding-right: 25px;
+[icon] {
+  font-family: icon;
 }
-html #top #header ul#top2 li:last-child,
-body #top #header ul#top2 li:last-child {
-  width: 111px;
-  height: 40px;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: #424242;
+[icon="cart"]::before {
+  content: "\E60C";
+  font-size: 1.5em;
 }
-html #top #header ul#top2 li:last-child:hover ul li,
-body #top #header ul#top2 li:last-child:hover ul li {
-  display: block;
-  transition: 1s;
-  height: 100px;
-  opacity: 1;
+[icon="arrow-right-big"]::after {
+  content: "\E623";
+  margin-right: 25px;
+  float: right;
 }
-html #top #header ul#top2 li:last-child ul,
-body #top #header ul#top2 li:last-child ul {
-  position: relative;
+[icon="arrow-right-big-l"]::before {
+  content: "\E622";
 }
-html #top #header ul#top2 li:last-child ul li,
-body #top #header ul#top2 li:last-child ul li {
-  width: 315px;
-  height: 0px;
-  opacity: 0;
-  position: absolute;
-  left: -204px;
-  background-color: white;
-  z-index: 10;
-  top: -2px;
-  box-shadow: 0 0 1px 0 black;
-  color: black;
+[icon="arrow-left-big-l"]::before {
+  content: "\E627";
+}
+[IconFont="submit"]::before {
+  content: "\f002";
+  font-size: 1.5em;
+}
+.site-nav {
+  background-color: #333333;
+}
+.site-nav > nav {
   margin: auto;
-  line-height: 100px;
+  width: 1226px;
+  font-size: 12px;
+  xdisplay: flow-root;
+}
+.site-nav > nav > div {
+  float: left;
+}
+.site-nav > nav a {
+  color: #b0b0b0;
+  line-height: 40px;
+  display: inline-block;
+}
+.site-nav > nav span {
+  color: #424242;
+  margin: 0 0.3em;
+}
+.site-nav > nav .top-nav-right {
+  float: right;
+}
+.site-nav > nav .top-nav-right .shopping-cart {
+  float: right;
+  position: relative;
+  background-color: #424242;
+  width: 120px;
+  height: 40px;
+  margin-left: 25px;
+}
+.site-nav > nav .top-nav-right .shopping-cart .shopping-cart-link {
+  width: 130px;
+  text-align: center;
+}
+.site-nav > nav .top-nav-right .shopping-cart .shopping-cart-list {
+  xdisplay: none;
+  position: absolute;
+  width: 320px;
+  height: 0px;
   transition: 1s;
-}
-html #top #header ul#top2 li:last-child ul li:hover,
-body #top #header ul#top2 li:last-child ul li:hover {
-  color: black;
-}
-html #top #header ul#top2 li:last-child:hover,
-body #top #header ul#top2 li:last-child:hover {
+  right: 0;
+  top: 100%;
+  overflow: hidden;
+  line-height: 100px;
+  text-align: center;
   background-color: white;
-  color: #ff9147;
 }
-html #top #header ul#top3,
-body #top #header ul#top3 {
-  margin: 0;
-  padding: 0;
+.site-nav > nav .top-nav-right .shopping-cart:hover {
+  background-color: white;
+}
+.site-nav > nav .top-nav-right .shopping-cart:hover .shopping-cart-link {
+  color: #ff6700;
+}
+.site-nav > nav .top-nav-right .shopping-cart:hover .shopping-cart-list {
+  xdisplay: block;
+  height: 100px;
+  box-shadow: 0 0 1px black;
+  z-index: 200;
+}
+.product-nav {
   height: 100px;
   position: relative;
-  line-height: 100px;
-  font-size: 0;
+  background-color: white;
 }
-html #top #header ul#top3 > li img,
-body #top #header ul#top3 > li img {
-  width: 55px;
-  height: 55px;
-  vertical-align: middle;
+.product-nav .product-nav-inner {
+  width: 1226px;
+  xheight: 100px;
+  margin: auto;
 }
-html #top #header ul#top3 li,
-body #top #header ul#top3 li {
-  display: inline-block;
-  font-size: 16px;
-}
-html #top #header ul#top3 li:hover,
-body #top #header ul#top3 li:hover {
-  color: red;
-}
-html #top #header ul#top3 li:first-child,
-body #top #header ul#top3 li:first-child {
+.product-nav .product-nav-inner .logo-link {
+  float: left;
+  margin-top: 25px;
   margin-right: 185px;
 }
-html #top #header ul#top3 li:nth-child(n+2),
-body #top #header ul#top3 li:nth-child(n+2) {
-  margin-right: 20px;
-}
-html #top #header ul#top3 li:nth-last-child(3),
-body #top #header ul#top3 li:nth-last-child(3) {
-  margin-right: 110px;
-}
-html #top #header ul#top3 li:nth-last-child(2),
-body #top #header ul#top3 li:nth-last-child(2) {
-  margin-right: 0;
-}
-html #top #header ul#top3 li:nth-last-child(2) input,
-body #top #header ul#top3 li:nth-last-child(2) input {
-  width: 239px;
-  height: 50px;
-  box-sizing: border-box;
-  padding: 0;
-}
-html #top #header ul#top3 li:last-child,
-body #top #header ul#top3 li:last-child {
+.product-nav .product-nav-inner .logo-link img {
   width: 50px;
   height: 50px;
-  box-sizing: border-box;
-  border: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+.product-nav .product-nav-inner .product-menu {
+  float: left;
+  display: flex;
+  font-size: 16px;
+}
+.product-nav .product-nav-inner .product-menu:hover .product-sub-menu {
+  height: 232px;
+}
+.product-nav .product-nav-inner .product-menu > li {
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  padding: 0 10px;
+}
+.product-nav .product-nav-inner .product-menu > li > a:hover {
+  color: #ff6700;
+}
+.product-nav .product-nav-inner .product-menu > li:hover .product-sub-menu {
+  z-index: 100;
+}
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu {
+  overflow: hidden;
   position: absolute;
-  top: 26px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  transition: height 0.5s 0.2s, z-index 1s 0s;
+  z-index: 50;
+  background-color: white;
+}
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul {
+  width: 1226px;
+  margin: auto;
+  display: flex;
+  height: 100%;
+}
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li {
+  width: calc(100% / 6);
+}
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li a {
+  display: flow-root;
+  padding: 35px 12px 0 12px;
+}
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li a img {
+  width: 180px;
+  height: 110px;
+  display: block;
   margin: 0;
 }
-html #top #header ul#top3 li:last-child:hover,
-body #top #header ul#top3 li:last-child:hover {
-  color: white;
-  background-color: #ff6700;
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li a .title,
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li a .price {
+  width: 180px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
 }
-html #top #body,
-body #top #body {
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li a .title {
+  color: black;
+  line-height: 67px;
+}
+.product-nav .product-nav-inner .product-menu > li .product-sub-menu ul li a .price {
+  color: #ff6700;
+  line-height: 67px;
+}
+.product-nav .product-nav-inner .product-nav-search {
+  float: right;
+  display: flex;
+  margin-top: 25px;
+  position: relative;
+}
+.product-nav .product-nav-inner .product-nav-search input {
+  height: 50px;
+  box-sizing: border-box;
+  border: 0;
+  width: 245px;
+  padding: 0;
+  border: 1px soild black;
+}
+.product-nav .product-nav-inner .product-nav-search input:focus {
+  border-color: #ff6700;
+}
+.product-nav .product-nav-inner .product-nav-search input:focus ~ .suggestions {
+  display: block;
+  border-color: #ff6700;
+}
+.product-nav .product-nav-inner .product-nav-search input:focus + button {
+  border-color: #ff6700;
+}
+.product-nav .product-nav-inner .product-nav-search button {
+  border: 1px solid;
+  width: 50px;
+}
+.product-nav .product-nav-inner .product-nav-search button:hover {
+  background-color: #ff6700;
+  color: white;
+}
+.product-nav .product-nav-inner .product-nav-search .suggestions {
+  position: absolute;
+  top: 100%;
+  width: 246px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-top: none;
+  display: none;
+  z-index: 150;
+}
+#body {
   width: 100%;
   height: 100%;
   position: relative;
   cursor: pointer;
+  background-color: white;
 }
-html #top #body #body1,
-body #top #body #body1 {
+#body #body1 {
   margin: 0;
   width: 1226px;
   padding: 0;
@@ -203,8 +261,7 @@ body #top #body #body1 {
   margin: auto;
   height: 100%;
 }
-html #top #body #body1 > ul:first-child,
-body #top #body #body1 > ul:first-child {
+#body #body1 > ul:first-child {
   position: absolute;
   list-style: none;
   padding: 0;
@@ -218,8 +275,7 @@ body #top #body #body1 > ul:first-child {
   float: left;
   left: 0;
 }
-html #top #body #body1 > ul:first-child > li,
-body #top #body #body1 > ul:first-child > li {
+#body #body1 > ul:first-child > li {
   position: relative;
   padding-left: 30px;
   height: 42px;
@@ -227,20 +283,16 @@ body #top #body #body1 > ul:first-child > li {
   color: white;
   box-sizing: border-box;
 }
-html #top #body #body1 > ul:first-child > li:first-child,
-body #top #body #body1 > ul:first-child > li:first-child {
+#body #body1 > ul:first-child > li:first-child {
   margin-top: 20px;
 }
-html #top #body #body1 > ul:first-child > li:first-child:hover ul,
-body #top #body #body1 > ul:first-child > li:first-child:hover ul {
+#body #body1 > ul:first-child > li:first-child:hover ul {
   display: block;
 }
-html #top #body #body1 > ul:first-child > li:first-child:hover ul li:hover,
-body #top #body #body1 > ul:first-child > li:first-child:hover ul li:hover {
+#body #body1 > ul:first-child > li:first-child:hover ul li:hover {
   color: red;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul,
-body #top #body #body1 > ul:first-child > li:first-child ul {
+#body #body1 > ul:first-child > li:first-child ul {
   position: absolute;
   list-style: none;
   padding: 0;
@@ -254,8 +306,7 @@ body #top #body #body1 > ul:first-child > li:first-child ul {
   box-shadow: 0 0 1px 0 black;
   display: none;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li,
-body #top #body #body1 > ul:first-child > li:first-child ul li {
+#body #body1 > ul:first-child > li:first-child ul li {
   height: 76.666px;
   width: 247.75px;
   margin: 0;
@@ -264,58 +315,47 @@ body #top #body #body1 > ul:first-child > li:first-child ul li {
   line-height: 76.666px;
   color: black;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li img,
-body #top #body #body1 > ul:first-child > li:first-child ul li img {
+#body #body1 > ul:first-child > li:first-child ul li img {
   vertical-align: middle;
   margin-right: 10px;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(-n+6),
-body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(-n+6) {
+#body #body1 > ul:first-child > li:first-child ul li:nth-child(-n+6) {
   padding-left: 28px;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+7),
-body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+7) {
+#body #body1 > ul:first-child > li:first-child ul li:nth-child(n+7) {
   margin-left: 247.75px;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+13),
-body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+13) {
+#body #body1 > ul:first-child > li:first-child ul li:nth-child(n+13) {
   margin-left: 495.5px;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+19),
-body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(n+19) {
+#body #body1 > ul:first-child > li:first-child ul li:nth-child(n+19) {
   margin-left: 743.25px;
 }
-html #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(6n+7),
-body #top #body #body1 > ul:first-child > li:first-child ul li:nth-child(6n+7) {
+#body #body1 > ul:first-child > li:first-child ul li:nth-child(6n+7) {
   margin-top: -460px;
 }
-html #top #body #body1 > ul:first-child > li:last-child,
-body #top #body #body1 > ul:first-child > li:last-child {
+#body #body1 > ul:first-child > li:last-child {
   margin-bottom: 20px;
 }
-html #top #body #body1 > ul:first-child > li:hover,
-body #top #body #body1 > ul:first-child > li:hover {
+#body #body1 > ul:first-child > li:hover {
   background-color: #ff6700;
 }
-html #top #body #body1 #body2,
-body #top #body #body1 #body2 {
+#body #body1 #body2 {
   width: 991px;
   height: 460px;
   position: relative;
   display: inline-block;
+  float: left;
+  margin-bottom: 30px;
 }
-html #top #body #body1 #body2 .check,
-body #top #body #body1 #body2 .check,
-html #top #body #body1 #body2 #checked,
-body #top #body #body1 #body2 #checked {
+#body #body1 #body2 .check,
+#body #body1 #body2 #checked {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-html #top #body #body1 #body2 .check label,
-body #top #body #body1 #body2 .check label,
-html #top #body #body1 #body2 #checked label,
-body #top #body #body1 #body2 #checked label {
+#body #body1 #body2 .check label,
+#body #body1 #body2 #checked label {
   position: absolute;
   width: 40px;
   height: 70px;
@@ -324,40 +364,30 @@ body #top #body #body1 #body2 #checked label {
   bottom: 0;
   line-height: 70px;
 }
-html #top #body #body1 #body2 .check label:first-child,
-body #top #body #body1 #body2 .check label:first-child,
-html #top #body #body1 #body2 #checked label:first-child,
-body #top #body #body1 #body2 #checked label:first-child {
+#body #body1 #body2 .check label:first-child,
+#body #body1 #body2 #checked label:first-child {
   left: 0;
   font-size: 2em;
   color: #bbc4cb;
 }
-html #top #body #body1 #body2 .check label:first-child:hover,
-body #top #body #body1 #body2 .check label:first-child:hover,
-html #top #body #body1 #body2 #checked label:first-child:hover,
-body #top #body #body1 #body2 #checked label:first-child:hover {
+#body #body1 #body2 .check label:first-child:hover,
+#body #body1 #body2 #checked label:first-child:hover {
   color: white;
   background-color: #4b5e6c;
 }
-html #top #body #body1 #body2 .check label:nth-child(2),
-body #top #body #body1 #body2 .check label:nth-child(2),
-html #top #body #body1 #body2 #checked label:nth-child(2),
-body #top #body #body1 #body2 #checked label:nth-child(2) {
+#body #body1 #body2 .check label:nth-child(2),
+#body #body1 #body2 #checked label:nth-child(2) {
   right: 0;
   color: #bbc4cb;
   font-size: 2em;
 }
-html #top #body #body1 #body2 .check label:nth-child(2):hover,
-body #top #body #body1 #body2 .check label:nth-child(2):hover,
-html #top #body #body1 #body2 #checked label:nth-child(2):hover,
-body #top #body #body1 #body2 #checked label:nth-child(2):hover {
+#body #body1 #body2 .check label:nth-child(2):hover,
+#body #body1 #body2 #checked label:nth-child(2):hover {
   color: white;
   background-color: #4b5e6c;
 }
-html #top #body #body1 #body2 .check img,
-body #top #body #body1 #body2 .check img,
-html #top #body #body1 #body2 #checked img,
-body #top #body #body1 #body2 #checked img {
+#body #body1 #body2 .check img,
+#body #body1 #body2 #checked img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -368,45 +398,31 @@ body #top #body #body1 #body2 #checked img {
   margin: auto;
   opacity: 0;
 }
-html #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) img,
-body #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) img,
-html #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) img,
-body #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) img,
-html #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) img,
-body #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) img,
-html #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) img,
-body #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) img {
+#body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) img,
+#body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) img,
+#body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) img,
+#body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) img {
   opacity: 1;
   transition: 1s;
 }
-html #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) label,
-body #top #body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) label,
-html #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) label,
-body #top #body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) label,
-html #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) label,
-body #top #body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) label,
-html #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) label,
-body #top #body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) label {
+#body #body1 #body2 > input:nth-child(1):checked ~ #checked :nth-child(1) label,
+#body #body1 #body2 > input:nth-child(2):checked ~ #checked :nth-child(2) label,
+#body #body1 #body2 > input:nth-child(3):checked ~ #checked :nth-child(3) label,
+#body #body1 #body2 > input:nth-child(4):checked ~ #checked :nth-child(4) label {
   z-index: 9;
 }
-html #top #body #body1 #body2 > input:nth-child(1):checked ~ .buttom :nth-child(1),
-body #top #body #body1 #body2 > input:nth-child(1):checked ~ .buttom :nth-child(1),
-html #top #body #body1 #body2 > input:nth-child(2):checked ~ .buttom :nth-child(2),
-body #top #body #body1 #body2 > input:nth-child(2):checked ~ .buttom :nth-child(2),
-html #top #body #body1 #body2 > input:nth-child(3):checked ~ .buttom :nth-child(3),
-body #top #body #body1 #body2 > input:nth-child(3):checked ~ .buttom :nth-child(3),
-html #top #body #body1 #body2 > input:nth-child(4):checked ~ .buttom :nth-child(4),
-body #top #body #body1 #body2 > input:nth-child(4):checked ~ .buttom :nth-child(4) {
+#body #body1 #body2 > input:nth-child(1):checked ~ .buttom :nth-child(1),
+#body #body1 #body2 > input:nth-child(2):checked ~ .buttom :nth-child(2),
+#body #body1 #body2 > input:nth-child(3):checked ~ .buttom :nth-child(3),
+#body #body1 #body2 > input:nth-child(4):checked ~ .buttom :nth-child(4) {
   background-color: white;
 }
-html #top #body #body1 #body2 .buttom,
-body #top #body #body1 #body2 .buttom {
+#body #body1 #body2 .buttom {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-html #top #body #body1 #body2 .buttom label,
-body #top #body #body1 #body2 .buttom label {
+#body #body1 #body2 .buttom label {
   width: 6px;
   height: 6px;
   border: 2px solid #728193;
@@ -417,8 +433,120 @@ body #top #body #body1 #body2 .buttom label {
   top: 92%;
   margin-left: 8px;
 }
-html #top #body #body1 #channel-list,
-body #top #body #body1 #channel-list {
+#body #body1 .channel-float {
+  display: flex;
+  width: 1226px;
+  margin: auto;
+  margin-bottom: 35px;
+  background-color: white;
+}
+#body #body1 .channel-float > img {
+  width: 316px;
+  height: 170px;
+  padding-left: 14px;
+}
+#body #body1 .channel-float .channel-list {
+  background-color: #5f5750;
   width: 235px;
   height: 170px;
+}
+#body #body1 .channel-float .channel-list li {
+  height: calc(170px/2);
+  width: calc(235px/3);
+  float: left;
+}
+#body #body1 .channel-float .channel-list li a {
+  text-align: center;
+  display: block;
+  color: #928c88;
+}
+#body #body1 .channel-float .channel-list li a:hover {
+  color: white;
+}
+#body #body1 .channel-float .channel-list li a:hover img {
+  opacity: 1;
+}
+#body #body1 .channel-float .channel-list li img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: auto;
+  margin-top: 18px;
+  opacity: 0.5;
+}
+#body #body3 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flow-root;
+  background-color: #f5f5f5;
+}
+#body #body3 .tip {
+  margin: auto;
+  width: 1226px;
+}
+#body #body3 .tip .tipp {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+#body #body3 .tip .tipp a img {
+  width: 1226px;
+  height: 120px;
+}
+#body #body3 .tip .h2-title {
+  height: 58px;
+  line-height: 58px;
+}
+#body #body3 .tip .h2-title .title1 {
+  float: left;
+  margin: 0 auto;
+  font-weight: normal;
+}
+#body #body3 .tip .h2-title .more {
+  float: right;
+}
+#body #body3 .tip .picture {
+  width: 1240px;
+  height: 628px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  flex-direction: column;
+  text-align: center;
+}
+#body #body3 .tip .picture a {
+  height: 300px;
+  width: 234px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+#body #body3 .tip .picture a img {
+  height: 160px;
+  width: 160px;
+}
+#body #body3 .tip .picture a h3 {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+#body #body3 .tip .picture a .desc {
+  margin-bottom: 10px;
+}
+#body #body3 .tip .picture a .price {
+  color: #ff832f;
+  display: inline-block;
+}
+#body #body3 .tip .picture a .price::after {
+  content: ' ';
+  white-space: pre;
+}
+#body #body3 .tip .picture > :first-child {
+  height: 620px;
+  width: 234px;
+  padding: none;
+}
+#body #body3 .tip .picture > :first-child img {
+  height: 620px;
+  width: 234px;
 }

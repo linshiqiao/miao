@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- <meta http-equiv="refresh" content="5"> -->
+  <title>JS Bin</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    html {
+      background-image: url("4KI71KYAV)[CZ76{[GLV4MS.png");
+    }
+
+    div {
+      height: 150px;
+      transform: perspective(800px) rotatex(0deg);
+      /* padding: 20px; */
+      /* display: flex; */
+      transform-style: preserve-3d;
+      background-color: 0;
+      position: relative;
+      animation: slidein 10s infinite;
+      /* transition: 15s;
+      transform: rotateX(0deg) rotateX(0deg); */
+      transform-origin: 200px 200px;
+    }
+
+    /* div:hover{
+      transform: rotateX(1080deg) rotateX(1080deg);
+
+    } */
+    section {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      position: absolute;
+
+      background-color: red;
+
+      transform: rotate(45deg);
+      transition: 1s;
+
+    }
+
+    section:nth-child(1) {
+      transform: translate(0px) rotate3d(0, 0, 0, 60deg);
+
+      background-color: red;
+      transform: translate(100px) rotatey(90deg);
+      transform-origin: left center;
+
+    }
+
+    section:nth-child(2) {
+      transform: translate(100px) translate(0px) rotate3d(0, 0, 0, 60deg);
+
+      background-color: orange;
+    }
+
+    section:nth-child(3) {
+      transform: translate(100px) rotatey(270deg);
+      transform-origin: right center;
+      background-color: yellow;
+    }
+
+    section:nth-child(4) {
+      transform: translatex(100px) translateZ(-50px);
+      transform-origin: top center;
+      background-color: green;
+    }
+
+    section:nth-child(5) {
+      transform: translatex(100px) translatez(-25px) rotatex(100deg);
+
+      background-color: cyan;
+    }
+
+    section:nth-child(6) {
+      transform: translatex(100px) translatez(0px) rotatex(270deg);
+      transform-origin: top;
+
+      background-color: blue;
+    }
+
+    @keyframes slidein {
+      from {
+        transform: rotatex(0deg) rotatey(0deg);
+      }
+
+      to {
+        transform: rotatex(360deg) rotatey(360deg);
+      }
+    }
+
+    main {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      /* background-color: aqua; */
+      /* transform: perspective(800px) translatex(100px) rotatex(50deg); */
+      transform-style: preserve-3d;
+      animation: pro 5s infinite;
+    }
+
+    aside {
+      height: 256px;
+      width: 256px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: brown;
+      text-align: center;
+      line-height: 256px;
+    }
+
+    aside:nth-child(1) {
+      transform: rotateX(90deg)translateZ(128px);
+      background-color: orange;
+      background-image: linear-gradient(rgba(255, 0, 0),
+          rgba(255, 255, 0)), linear-gradient(to right, rgba(255, 0, 0), rgba(119, 34, 119));
+      background-blend-mode: screen;
+    }
+
+    aside:nth-child(2) {
+      transform: rotateX(-90deg) translateZ(128px);
+      background-color: orange;
+    }
+
+
+    aside:nth-child(3) {
+      transform: rotatey(90deg)translateZ(128px);
+      background-color: yellow;
+    }
+
+    aside:nth-child(4) {
+      transform: rotatey(-90deg)translateZ(128px);
+      background-color: green;
+    }
+
+    aside:nth-child(5) {
+      transform: rotatex(180deg)translateZ(128px);
+      background-color: aqua;
+    }
+
+    aside:nth-child(6) {
+      transform: rotatez(0deg)translateZ(128px);
+      background-color: orange;
+    }
+
+    @keyframes pro {
+      from {
+        transform: rotatex(0deg) rotateY(0deg);
+      }
+
+      to {
+        transform: rotatex(360deg) rotateY(360deg);
+      }
+    }
+
+    table {
+      border-spacing: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    td {
+      width: calc(100% / 16);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+  </div>
+  <main>
+    <aside>1</table>
+    </aside>
+    <aside>2</aside>
+    <aside>3</aside>
+    <aside>4</aside>
+    <aside>5</aside>
+    <aside>
+      <table>
+        <tr>
+          <td bgcolor="#ff0"></td>
+          <td bgcolor="#ff1"></td>
+          <td bgcolor="#ff2"></td>
+          <td bgcolor="#ff3"></td>
+          <td bgcolor="#ff4"></td>
+          <td bgcolor="#ff5"></td>
+          <td bgcolor="#ff6"></td>
+          <td bgcolor="#ff7"></td>
+          <td bgcolor="#ff8"></td>
+          <td bgcolor="#ff9"></td>
+          <td bgcolor="#ff10"></td>
+          <td bgcolor="#ff11"></td>
+          <td bgcolor="#ff12"></td>
+          <td bgcolor="#ff13"></td>
+          <td bgcolor="#ff14"></td>
+          <td bgcolor="#ff015"></td>
+        </tr>
+    </aside>
+  </main>
+
+</body>
+
+</html>
