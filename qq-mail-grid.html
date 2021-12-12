@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<style>
+  * {
+    background-color: rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 0 1px red;
+  }
+
+  body {
+
+    margin: 0px;
+
+
+
+  }
+
+  section {
+    display: grid;
+    height: 500px;
+    width: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 'a a'
+      'b c';
+  }
+
+  header {
+    grid-area: a;
+  }
+
+
+  div {
+    grid-area: b;
+  }
+
+  main {
+    grid-area: c;
+  }
+</style>
+
+<body>
+  <section>
+    <header></header>
+    <div></div>
+    <main></main>
+  </section>
+</body>
+
+</html>

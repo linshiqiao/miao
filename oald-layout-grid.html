@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="refresh" content="1"> -->
+  <title>Oald</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    section {
+      height: 800px;
+      width: 1000px;
+      display: grid;
+      grid-template-columns: 200px 1fr 200px 200px;
+      grid-template-rows: 100px 1fr;
+      grid-template-areas: 'a b c d'
+        'a e c d';
+    }
+
+    div:nth-child(1) {
+      grid-area: a;
+      background-color: aqua;
+    }
+
+    div:nth-child(2) {
+      grid-area: b;
+      background-color: yellow;
+    }
+
+    div:nth-child(3) {
+      grid-area: e;
+      background-color: gainsboro;
+    }
+
+    div:nth-child(4) {
+      grid-area: c;
+      background-color: goldenrod;
+    }
+
+    div:nth-child(5) {
+      grid-area: d;
+      background-color: greenyellow;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+  </section>
+</body>
+
+</html>
