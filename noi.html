@@ -203,3 +203,346 @@
   console.log(Math.pow(2, n))
 
 </script>
+
+<script type="xxx" id="ch0104/01">
+
+  var N = +prompt("整数N", "")
+  if(N > 0){
+    console.log("positive")
+  }
+  else if(N == 0){
+    console.log("zero")
+  }
+  else{
+    console.log("negative")
+  }
+
+</script>
+<script type="xxx" id="ch0104/02">
+
+  var a = +prompt("请输入a的值", "")
+
+  console.log(Math.abs(a))
+
+</script>
+<script type="xxx" id="ch0104/03">
+
+  var a = +prompt("请输入a的值", "")
+
+  if(a % 2 == 0){
+    console.log("even")
+
+  }
+  else{
+    console.log("odd")
+  }
+
+
+
+</script>
+
+<script type="xxx" id="ch0104/04">
+
+  var a = prompt("输入一个字符", "").charCodeAt()
+
+  if(a % 2 != 0){
+    console.log("YES")
+  }
+  else{
+    console.log("NO")
+  }
+
+
+
+</script>
+
+<script type="xxx" id="ch0104/05">
+
+  var x = +prompt("请输入x的值", "")
+  var y = +prompt("请输入y的值", "")
+
+  if(x > y){
+  console.log(">")
+    }
+  else if(x == y){
+    console.log("=")
+  }
+  else{
+    console.log("<")
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/06">
+
+  var a = +prompt("请输入a的值", "")
+
+  if(a >= 10 && a <= 99){
+    console.log(1)
+  }
+  else{
+    console.log(0)
+  }
+
+
+
+</script>
+
+<script type="xxx" id="ch0104/07">
+
+  var a = +prompt("请输入印有幸运的数量", "")
+  var b = +prompt("请输入印有鼓励的数量", "")
+
+  if (a >= 10 || b >= 20) {
+    console.log(1)
+  }
+  else {
+    console.log(0)
+  }
+
+
+</script>
+
+<script type="xxx" id="ch0104/08">
+
+
+  var n = +prompt("请输入n的值", "")
+
+  if(n % 3 == 0 && n % 5 == 0){
+    console.log("YES")
+  }
+  else{
+    console.log("NO")
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/09">
+
+  var n = +prompt("请输入n的值", "")
+
+  if(n % 3 == 0 && n % 5 == 0 && n % 7 == 0){
+    console.log(3, 5, 7)
+  }
+  else if(n % 3 == 0 && n % 5 == 0 || n % 3 == 0 && n % 7 == 0 || n % 5 == 0 && n % 7 == 0){
+    console.log(3, 5)
+  }
+  else if( n % 3 == 0 && n % 7 == 0 ){
+    console.log(3, 7)
+  }
+  else if(n % 5 == 0 && n % 7 == 0){
+    console.log(5, 7)
+  }
+  else if(n % 3 == 0){
+    console.log(3)
+  }
+  else if(n % 5 == 0){
+    console.log(5)
+  }
+  else if(n % 7 == 0){
+    console.log(7)
+  }
+  else{
+    console.log("n")
+  }
+</script>
+
+<script type="xxx" id="ch0104/10">
+
+  var a = +prompt("请输入语文成绩", "")
+  var b = +prompt("请输入数学成绩", "")
+
+  if(a < 60 && b >= 60){
+  console.log(1)
+  }
+  else if(a >= 60 && b < 60){
+  console.log(1)
+  }
+  else{
+    console.log(0)
+  }
+</script>
+
+<script type="xxx" id="ch0104/11">
+
+  var a = +prompt("输入有一行，贝贝邀请晶晶去看展览的日期，用数字1到7表示从星期一到星期日", "")
+
+  if(a === 1 || a === 3 || a === 5){
+    console.log("NO")
+  }
+  else{
+    console.log("YES")
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/12">
+
+  var a = +prompt("输入一行，包含一个整数，表示一次办事要行走的距离,单位为米。", "")
+
+  if ((a / 1.2) > (a / 3 + 27 + 23)) {
+    console.log("Bike")
+
+  }
+  else if ((a / 1.2) == (a / 3 + 27 + 23)) {
+    console.log("All")
+  }
+  else {
+    console.log("Walk")
+
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/13">
+
+  var x = +prompt("一个浮点数x,0 <= x < 20", "")
+  var y
+
+ if(x >= 0 && x < 5){
+  y = -1 * x + 2.5
+
+ }
+  else if(x >= 5 && x < 10){
+    y = 2 - 1.5 * (x - 3) * (x - 3)
+  }
+  else{
+    y = x / 2 - 1.5
+  }
+  console.log(y.toFixed(3))
+</script>
+
+<script type="xxx" id="ch0104/14">
+
+  var weight = +prompt("邮件的重量 单位为克", "")
+  var urgent = prompt("是否选择加急 字符是y，说明选择加急；如果字符是n，说明不加急", "")
+
+
+  if( weight <= 1000 && urgent == "y"){
+   console.log(13)
+  }
+  else if(weight > 1000 && urgent == "y"){
+   console.log(Math.ceil((weight - 1000) / 500) * 4 + 8 +5 )
+  }
+  else if(weight > 1000 ){
+   console.log(Math.ceil((weight - 1000) / 500) * 4 )
+  }
+  else{
+   console.log(8)
+  }
+</script>
+
+<script type="xxx" id="ch0104/15">
+
+  var n = +prompt("请输入n", "")
+  var x = +prompt("请输入x", "")
+  var y = +prompt("请输入y", "")
+
+  if(n >= x && n >= y){
+   console.log(n)
+  }
+  else if(x >= n && x >= y){
+    console.log(x)
+  }
+  else{
+    console.log(y)
+  }
+</script>
+
+<script type="xxx" id="ch0104/16">
+
+  var a = +prompt("请输入a", "")
+  var b = +prompt("请输入b", "")
+  var c = +prompt("请输入c", "")
+
+  if(a < (b + c) && b < (a + c) && c < (a + b) && a > (b - c) && a > (c - b) && b > (a - c) && b > (c - a) && c > (a - b) && c > (b - a)){
+    console.log("yes")
+  }
+  else {
+    console.log("no")
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/17">
+
+  var a = +prompt("请输入a", "")
+
+  if(a % 4 == 0 && a % 100 != 0 || a % 400 == 0){
+    console.log("Y")
+  }
+  else{
+    console.log("N")
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/18">
+
+  var x = +prompt("请输入x", "")
+  var y = +prompt("请输入y", "")
+
+  if(x >= -1 && x <= 1 && y>= -1 && y <= 1){
+    console.log("yes")
+  }
+  else{
+    console.log("no")
+  }
+
+</script>
+
+<script type="xxx" id="ch0104/19">
+
+  var A = parseInt(+prompt("请输入整数A", ""))
+  var B = parseInt(+prompt("请输入整数B", ""))
+  var C = prompt("请输入操作符（+,-,*,/）C", "")
+
+  if(C == "+"){
+   console.log(A + B)
+  }
+  else if(C == "-"){
+   console.log(A - B)
+  }
+  else if(C == "*"){
+   console.log(A * B)
+  }
+  else if(C == "/" &&  B != 0){
+   console.log(A / B)
+  }
+  else if(C == "/" && B == 0){
+   console.log("Divided by zero!")
+  }
+  else{
+    console.log("Invalid operator!")
+  }
+</script>
+
+<script type="xxx" id="ch0104/20">
+
+  var a = +prompt("请输入a", "")
+  var b = +prompt("请输入b", "")
+  var c = +prompt("请输入c", "")
+  var x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+  var x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+
+  if(b * b == 4 * a * c){
+    console.log("x1=x2=" + x1)
+  }
+  if(b * b > 4 * a * c){
+    console.log("x1=" + x1, "x2=" + x2)
+  }
+
+  if(b * b < 4 * a * c){
+    console.log("x1=" + (-1 * b / (2 * a)).toFixed(5) + "+" + (Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)+ "i;x2=" + (-1 * b / (2 * a)).toFixed(5) + "-" + (Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)+ "i", )
+  }
+</script>
+
+<script type="xxx" id="ch0104/21">
+
+  var n = +prompt("请输入n", "")
+  var x = +prompt("请输入x", "")
+  var y = +prompt("请输入y", "")
+
+  console.log(n - Math.ceil(y / x))
+
+</script>
