@@ -546,3 +546,496 @@
   console.log(n - Math.ceil(y / x))
 
 </script>
+
+<script type="xxx" id="ch0105/01">
+  var y = 0
+  var t
+  var n = +prompt("n")
+  t = n
+  while (n > 0) {
+    var x = +prompt("每个学生的年龄")
+    n = n - 1
+    y = y + x
+
+  }
+  console.log((y / t).toFixed(2))
+
+</script>
+<script type="xxx" id="ch0105/02">
+
+  var money = 0
+  for (var a = 0; a <= 11; a++) {
+    var b = +prompt()
+    money = money + b
+  }
+  var average = money / 12
+  console.log("$" + average.toFixed(2))
+
+</script>
+
+<script type="xxx" id="ch0105/03">
+
+  var n = +prompt("请输入n的值", "")
+
+  var c = 0
+  for (var a = 0; a <= n - 1; a++) {
+    var b = +prompt()
+    c = c + b
+  }
+  var average = c / n
+  console.log(average.toFixed(4))
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/04">
+
+  var n = +prompt("请输入n的值", "")
+
+  var c = 0
+  for (var a = 0; a <= n - 1; a++) {
+    var b = +prompt()
+    c = c + b
+  }
+
+  var average = c / n
+  console.log(parseInt(c), average.toFixed(5))
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/05">
+
+  var n = +prompt("请输入n的值", "")
+
+  var c = 0
+  for (var a = 0; a <= n - 1; a++) {
+    var b = +prompt()
+    if (c < b) {
+      c = b
+    }
+  }
+
+  console.log(c)
+
+</script>
+
+<script type="xxx" id="ch0105/06">
+
+  var n = +prompt("请输入n的值", "")
+
+  var Max = 0, Min = 0
+  for (var a = 0; a <= n - 1; a++) {
+    var b = +prompt()
+    if (Max < b) {
+      Max = b
+    }
+    if (Min > b) {
+      Min = b
+    }
+  }
+  var result = Max - Min
+  console.log(result)
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/07">
+
+  var n = +prompt("请输入n的值", "")
+
+  var gold = 0, silve = 0, copper = 0
+  for (var a = 0; a <= n - 1; a++) {
+    for (var t = 0; t < 1; t++) {
+      var b = +prompt()
+      var c = +prompt()
+      var d = +prompt()
+      gold = gold + b
+      silve = silve + c
+      copper = copper + d
+    }
+
+  }
+  var sum = gold + silve + copper
+  console.log(gold, silve, copper, sum)
+
+
+</script>
+
+<script type="xxx" id="ch0105/08">
+
+
+  var n = +prompt("请输入n的值", "")
+
+  var angles = (n - 2) * 180
+  var c = 0, d = 0
+  for (var a = 0; a <= n - 2; a++) {
+    var b = +prompt()
+    c = c + b
+  }
+  d = angles - c
+  console.log(d)
+
+</script>
+
+<script type="xxx" id="ch0105/09">
+
+
+  var m = +prompt()
+  var n = +prompt()
+  var sum = 0
+  for (var a = m; a <= n; a++) {
+    if (a % 2 != 0) {
+      sum = sum + a
+    }
+  }
+  console.log(sum)
+
+</script>
+
+<script type="xxx" id="ch0105/10">
+
+  var m = +prompt()
+  var n = +prompt()
+  var sum = 0
+  for (var a = m; a <= n; a++) {
+    if (a % 17 == 0) {
+      sum = sum + a
+    }
+  }
+  console.log(sum)
+
+</script>
+
+<script type="xxx" id="ch0105/11">
+
+
+  var n = +prompt()
+  var one = 0, five = 0, ten = 0
+
+  for (var a = 0; a <= n - 1; a++) {
+    var b = +prompt()
+    if (b == 1) {
+      one++
+    }
+    if (b == 5) {
+      five++
+    }
+    if (b == 10) {
+      ten++
+    }
+  }
+  console.log(one)
+  console.log(five)
+  console.log(ten)
+
+</script>
+
+<script type="xxx" id="ch0105/12">
+
+  var n = +prompt()
+  var m = +prompt()
+  var sum = 0
+
+  for (var a = 0; a <= n - 1; a++) {
+    var b = +prompt()
+    if (b == m) {
+      sum++
+    }
+  }
+  console.log(sum)
+
+
+</script>
+
+<script type="xxx" id="ch0105/13">
+
+  var a = +prompt()
+  var n = +prompt()
+  var involution = 1
+
+  for (var b = 0; b <= n - 1; b++) {
+    involution = involution * a
+  }
+  console.log(involution)
+
+</script>
+
+<script type="xxx" id="ch0105/14">
+
+  var x = +prompt()
+  var n = +prompt()
+  var population = 1
+  var b = 1 + 0.001
+  var speed = 1
+  for (var a = 0; a <= n - 1; a++) {
+    speed = speed * b
+  }
+  population = x * speed
+  console.log(population.toFixed(4))
+
+</script>
+
+<script type="xxx" id="ch0105/15">
+
+  var R = +prompt()
+  var M = +prompt()
+  var Y = +prompt()
+
+  var b = 1 + R / 100
+  var speed = 1
+  for (var a = 0; a <= Y - 1; a++) {
+    speed = speed * b
+  }
+  M = M * speed
+
+  console.log(parseInt(M))
+
+</script>
+
+<script type="xxx" id="ch0105/16">
+
+  var N = +prompt()
+  var K = +prompt()
+
+
+
+  var speed = 1
+  var t
+
+  for (var a = 0; a <= 19; a++) {
+
+
+    if (N * a >= 200 * (a * K / 100 + 1)) {
+      t = a + 1
+      break;
+    }
+
+  }
+
+  if (N * a >= 200 * (a * K / 100 + 1)) {
+    console.log(t)
+  }
+  else {
+    console.log("Impossible")
+  }
+
+</script>
+
+<script type="xxx" id="ch0105/17">
+
+  var k = +prompt()
+  var b = 1
+  var c = 1
+  var before = 0
+
+
+
+  if (k == 1) {
+    console.log(1)
+  }
+  else if (k == 2) {
+    console.log(1)
+  }
+  else {
+    for (var a = 2; a <= k - 1; a++) {
+      before = b + c
+      b = c
+      c = before
+
+    }
+    console.log(before)
+  }
+
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/18">
+
+  var k = +prompt()
+  var d, e
+
+  for (var a = 0; a <= k - 1; a++) {
+    var b = +prompt()
+    var c = +prompt()
+    if (a == 0) {
+      d = b
+      e = c
+    }
+    else if (a >= 1) {
+      if (b / d - c / e > 0.05) {
+        console.log("worse")
+      }
+      else if (c / e - b / d > 0.05) {
+        console.log("better")
+      }
+      else {
+        console.log("same")
+      }
+    }
+  }
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/19">
+
+  var k = +prompt()
+  var e, f
+  var speed = 0
+  for (var a = 0; a <= k - 1; a++) {
+    var b = +prompt()
+    var c = +prompt()
+    var d = +prompt()
+    e = Math.sqrt(b * b + c * c)
+    f = e / 50
+    speed = speed + f * 2 + d * (1 + 0.5)
+  }
+
+  console.log(Math.ceil(speed))
+
+</script>
+
+<script type="xxx" id="ch0105/20">
+
+  var k = +prompt()
+  var height = 20
+  var b = 0
+  for (var a = 0; a <= 10 - 1; a++) {
+
+
+    height = height + b * 2
+    k = k / 2
+    b = k
+  }
+
+  console.log(height.toFixed(4))
+  console.log(k.toFixed(7))
+</script>
+
+<script type="xxx" id="ch0105/21">
+
+  var k = +prompt()
+
+  var b = 0
+  while (k != 1) {
+    if (k % 2 != 0) {
+      b = k * 3 + 1
+      console.log(k + "*" + 3 + "+" + 1 + "=" + b)
+      k = b
+    }
+    else if (k % 2 == 0) {
+      b = k / 2
+      console.log(k + "/" + 2 + "=" + b)
+      k = b
+    }
+  }
+
+  console.log("End")
+
+
+</script>
+<script type="xxx" id="ch0105/22">
+
+
+
+  var b = 0
+  var c = 0
+  var t = 0
+  for (var a = 0; a <= 12 - 1; a++) {
+    var k = +prompt()
+    b = b + 300
+    if (k > b) {
+
+      if (t == 0) {
+        t = -1 * (a + 1)
+      }
+    }
+
+    else {
+      b = b - k
+      if (b >= 100) {
+        c = c + (b - b % 100)
+        b = b - (b - b % 100)
+      }
+    }
+
+  }
+  if (t < 0) {
+    console.log(t)
+  }
+  else {
+    c = c * (1 + 0.2)
+    console.log(c + b)
+  }
+
+
+</script>
+
+<script type="xxx" id="ch0105/23">
+  var m = +prompt()
+  var k = +prompt()
+  var b = 0
+
+  for (var a = 0; a <= k - 1; a++) {
+    var number = +prompt()
+    if (m < number) {
+      b++
+
+    }
+    else {
+      m = m - number
+    }
+  }
+
+  console.log(b)
+
+</script>
+
+<script type="xxx" id="ch0105/24">
+
+  var m = +prompt()
+
+  var b = 0
+
+  for (var a = 0; a <= m - 1; a++) {
+    var pressure = +prompt()
+    var diastole = +prompt()
+    if (pressure > 90 && pressure < 140 && diastole >= 60 && diastole <= 90) {
+      b++
+
+    }
+  }
+
+  console.log(b)
+
+</script>
+
+<script type="xxx" id="ch0105/25">
+
+  var seven = 0
+  var seven100, seven10, seven1
+  var nine = 0
+  var nine100, nine10, nine1
+  for (var a = 100; a < 1000; a++) {
+    seven = parseInt(a, 7)
+    nine = parseInt(a, 9)
+    seven100 = (seven - seven % 100) / 100
+    seven10 = (seven % 100 - seven % 10) / 10
+    seven1 = seven % 10
+    nine100 = (nine - nine % 100) / 100
+    nine10 = (nine % 100 - nine % 10) / 10
+    nine1 = nine % 10
+    if (seven100 == nine1 && seven10 == nine10 && seven1 == nine100) {
+      console.log(a)
+      break
+    }
+  }
+
+</script>
