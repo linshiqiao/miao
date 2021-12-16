@@ -1093,3 +1093,67 @@
 
 
 </script>
+
+<script type="xxx" id="ch0105/29">
+
+  var m = +prompt()
+
+  var b, c, t
+  var str = 0
+  for (var a = 1; a <= 10; a++) {
+    if (m < 0) {
+      m = -m
+      t = -1
+    }
+    b = Math.pow(10, a)
+
+    c = Math.pow(10, a - 1)
+
+    if (c > m) {
+      break
+    }
+
+    str += ((m % b - m % c) / c) + ""
+
+    str = + str
+  }
+  if (t == -1) {
+    console.log(-1 * str)
+  }
+  else {
+    console.log(str)
+  }
+</script>
+
+<script type="xxx" id="ch0105/30">
+
+  var m = +prompt()
+  var k = +prompt()
+  var b, c
+  var d = 0
+  for (var a = 1; a <= 6; a++) {
+    if (m < 0) {
+      m = -m
+      t = -1
+    }
+    b = Math.pow(10, a)
+
+    c = Math.pow(10, a - 1)
+
+    if (c > m) {
+      break
+    }
+
+    str = (m % b - m % c) / c
+    if (str == 3) {
+      d++
+    }
+
+  }
+  if (m % 19 == 0 && d == k) {
+    console.log("YES")
+  }
+  else {
+    console.log("NO")
+  }
+</script>
