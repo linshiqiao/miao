@@ -1030,3 +1030,66 @@
   }
 
 </script>
+
+<script type="xxx" id="ch0105/26">
+
+  var m = +prompt()
+
+  var b = 0
+
+  for (var a = 0; a <= m - 1; a++) {
+    var number = +prompt()
+    var number1, number10, number100, number1000
+    number1 = number % 10
+    number10 = (number % 100 - number % 10) / 10
+    number100 = (number % 1000 - number % 100) / 100
+    number1000 = (number - number % 1000) / 1000
+    if (number1 - number1000 - number100 - number10 > 0) {
+      b++
+    }
+  }
+  console.log(b)
+
+</script>
+
+<script type="xxx" id="ch0105/27">
+
+  var k = +prompt()
+  var sum = 0
+  var a = 0
+
+  while (sum <= k) {
+
+    sum = sum + 1 / (a + 1)
+    a++
+  }
+  console.log(a)
+
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/28">
+
+  var m = +prompt()
+
+  var b, c
+  for (var a = 1; a < 10; a++) {
+
+    b = Math.pow(10, a)
+
+    c = Math.pow(10, a - 1)
+
+    if (c > m) {
+      break
+    }
+
+    console.log((m % b - m % c) / c)
+
+  }
+
+
+
+
+</script>
