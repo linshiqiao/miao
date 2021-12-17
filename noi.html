@@ -1010,24 +1010,21 @@
 
 <script type="xxx" id="ch0105/25">
 
-  var seven = 0
-  var seven100, seven10, seven1
-  var nine = 0
-  var nine100, nine10, nine1
-  for (var a = 100; a < 1000; a++) {
-    seven = parseInt(a, 7)
-    nine = parseInt(a, 9)
-    seven100 = (seven - seven % 100) / 100
-    seven10 = (seven % 100 - seven % 10) / 10
-    seven1 = seven % 10
-    nine100 = (nine - nine % 100) / 100
-    nine10 = (nine % 100 - nine % 10) / 10
-    nine1 = nine % 10
-    if (seven100 == nine1 && seven10 == nine10 && seven1 == nine100) {
-      console.log(a)
-      break
+
+  for (var x = 1; x < 7; x++) {
+    for (var y = 0; y < 7; y++) {
+      for (var z = 0; z < 7; z++) {
+        var seven = x * 7 * 7 + y * 7 + z
+        var nine = z * 9 * 9 + y * 9 + x
+        if (seven == nine) {
+          console.log(x * 7 * 7, y * 7, z)
+          console.log(x, y, z)
+          console.log(z, y, x)
+        }
+      }
     }
   }
+
 
 </script>
 
