@@ -1373,3 +1373,60 @@
   }
   console.log(character)
 </script>
+
+<script type="xxx" id="ch0105/43">
+
+  var m = +prompt()
+  var max = 0
+
+  for (var i = 6; i <= m; i++) {
+
+    if (i < 10 && i % 2 != 0 && i % 3 != 0 && m / i == parseInt(m / i)) {
+      max = i
+    } else if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0 && m / i == parseInt(m / i)) {
+      max = i
+    }
+
+  }
+  console.log(max)
+</script>
+
+<script type="xxx" id="ch0105/44">
+
+  var m = +prompt()
+
+  var counter = 0
+  for (var i = 1; i <= Infinity; i++) {
+    if (i == 2 || i == 3 || i == 5 || i == 7) {
+      counter++
+    }
+    else if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0 && i >= 10) {
+      counter++
+    }
+    if (counter == m) {
+      break
+    }
+  }
+  console.log(i)
+
+</script>
+
+<script type="xxx" id="ch0105/45">
+
+  var m = +prompt()
+  var day = 0
+  var sum = 0
+  for (var i = 1; i <= m; i++) {
+    for (var j = 1; j <= i; j++) {
+      day++
+      sum += i
+      if (day == m) {
+        break
+      }
+    }
+    if (day == m) {
+      break
+    }
+  }
+  console.log(sum)
+</script>
