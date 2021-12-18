@@ -1237,3 +1237,54 @@
   console.log(add)
 
 </script>
+
+<script type="xxx" id="ch0105/35">
+
+
+  var m = +prompt()
+  var add = 0
+  var sum = 1
+  for (var i = 1; i <= m; i++) {
+
+    for (var j = 1; j <= i; j++) {
+      sum *= 1 / j
+
+    }
+    add += sum
+    sum = 1
+
+
+  }
+  console.log((add + 1).toFixed(10))
+
+</script>
+
+<script type="xxx" id="ch0105/36">
+
+  var x = +prompt()
+  var n = +prompt()
+  var sum = 0
+  var t = 0
+  for (var i = n; i >= 0; i--) {
+
+    t = Math.pow(x, i)
+    sum += t
+  }
+  console.log(sum.toFixed(2))
+</script>
+
+<script type="xxx" id="ch0105/37">
+
+  var M = +prompt()   //体力值
+  var N = +prompt()   //战斗力
+  var X = +prompt()   //能量元素
+
+
+  while (X >= 0) {
+    N += Math.floor(M / N)  //增加战斗力
+    X -= Math.ceil(M / N)   //消耗能量元素
+  }
+
+  console.log(N)
+
+</script>
