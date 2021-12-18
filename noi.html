@@ -1288,3 +1288,88 @@
   console.log(N)
 
 </script>
+
+<script type="xxx" id="ch0105/38">
+
+
+
+
+
+</script>
+
+<script type="xxx" id="ch0105/39">
+
+  var n = +prompt()
+  var sum = 0
+  for (var i = 1; i <= n; i++) {
+    if (i % 7 == 0 || i % 10 == 7 || i / 10 % 10 == 7) {
+      continue
+    } else {
+      sum += Math.pow(i, 2)
+    }
+  }
+  console.log(sum)
+</script>
+
+
+<script type="xxx" id="ch0105/40">
+
+  var n = +prompt()
+  var counter = 0
+  for (var i = 1; i <= n; i++) {
+    if (i == 1) {
+      counter++
+    } else if (i % 10 == 1 && parseInt(i / 10) != 1 || i % 10 != 1 && parseInt(i / 10) == 1) {
+      counter++
+    } else if (i % 10 == 1 && parseInt(i / 10) == 1) {
+      counter += 2
+    }
+  }
+  console.log(counter)
+
+</script>
+
+<script type="xxx" id="ch0105/41">
+
+  var n = +prompt()
+  var m = +prompt()
+  var counter = 0
+  for (var i = n; i <= m; i++) {
+    if (i == n) {
+      counter++
+    } else if (i % 10 == n && parseInt(i / 10) != n || i % 10 != n && parseInt(i / 10) == n) {
+      counter++
+    } else if (i % 10 == n && parseInt(i / 10) == n) {
+      counter += 2
+    }
+  }
+  console.log(counter)
+
+
+</script>
+<script type="xxx" id="ch0105/42">
+  var x = +prompt()
+  var y = +prompt()
+  var z = prompt()
+  var t = +prompt()
+  var character = ""
+
+  for (var i = 1; i <= y; i++) {
+    character += "\n"
+    for (var j = 1; j <= x; j++) {
+      if (t == 0) {
+        if (i == 1 || i == y || i > 1 && i < y && j == 1 || j == x) {
+          character = character + z + " "
+        }
+        else {
+
+          character += "  "
+
+        }
+      } else {
+        character = character + z + " "
+      }
+    }
+  }
+  console.log(character)
+</script>
