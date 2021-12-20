@@ -1489,3 +1489,180 @@
   }
   console.log(sum)
 </script>
+
+<script type="xxx" id="narcissistic">
+
+  var m = +prompt()
+  // if (Math.pow(number % 10, 3) + Math.pow((number % 100 - number % 10) / 10, 3) + Math.pow((number - number % 100) / 100, 3) == number) {
+  //   console.log("YES")
+  // }
+  // else {
+  //   console.log("NO")
+  // }
+  var number = m
+  var sum = 0
+  while (number > 0) {
+
+    var x = number % 10
+    sum += Math.pow(x, 3)
+    number = (number - x) / 10
+  }
+  if (sum == m) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+</script>
+
+<script type="xxx" id="narcissistics">
+
+var str = ""
+  for (var i = 100; i < 10000; i++) {
+
+    // if (Math.pow(i % 10, 3) + Math.pow((i % 100 - i % 10) / 10, 3) + Math.pow((i % 1000 - i % 100) / 100, 3) + Math.pow((i % 10000 - i % 1000) / 1000, 3) == i) {
+    //   console.log(i)
+    // }
+    var number =  i
+    var sum = 0
+
+    while (number > 0) {
+
+      var x = number % 10
+      sum += Math.pow(x, 3)
+      number = (number - x) / 10
+    }
+    if(sum == i){
+      str = str + i + " "
+    }
+  }
+  console.log(str)
+
+
+</script>
+
+
+<script type="xxx" id="palindrom">
+
+  var m = +prompt()
+  var number = m
+  var sum = 0
+  while (number > 0) {
+    var x = number % 10
+    sum = sum * 10 + x
+    number = (number - x) / 10
+  }
+  if (sum == m) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+</script>
+
+<script type="xxx" id="weekday">
+  var year = +prompt()
+  var month = +prompt()
+
+
+</script>
+
+<script type="xxx" id="complete-number">
+  var m = +prompt()
+  var sum = 0
+  for (var i = 1; i < m; i++) {
+    if (m % i == 0) {
+      sum += i
+    }
+  }
+  if (sum == m) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+
+</script>
+
+<script type="xxx" id="complete-number">
+
+  var str = ""
+  for (var i = 1; i < 1000; i++) {
+    var sum = 0
+    for (var j = 1; j < i; j++) {
+      if (i % j == 0) {
+        sum += j
+      }
+    }
+    if (sum == i) {
+      str = str + i + " "
+    }
+  }
+  console.log(str)
+
+</script>
+
+<script type="xxx" id="prime">
+  var m = +prompt()
+  var prime  = true
+  for (var i = 2; i < m; i++) {
+    if(m % i == 0){
+      prime  = false
+      break
+    }
+  }
+  if (prime) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+
+</script>
+
+<script type="xxx" id="primes">
+  var str = ""
+  var prime = true
+  for (var i = 2; i < 100; i++) {
+    var sum = 0
+    for (var j = 2; j < i; j++) {
+      if (i % j == 0) {
+        prime = false
+        break
+      }
+    }
+    if (prime) {
+      str = str + i + " "
+    }
+    prime = true
+  }
+
+
+  console.log(str)
+</script>
+
+<script type="xxx" id="itoa">
+
+
+</script>
+
+<script type="xxx" id="lcf&lcm">
+
+  var m = +prompt()
+  var n = +prompt()
+  var minnumber = maxnumber = m
+  var max = min = 0
+  var judge = true
+
+  if (m > n) {
+    minnumber = n
+  } else {
+    maxnumber = n
+  }
+  for (var i = 2; i <= minnumber; i++) {
+    if (minnumber % i == 0 && maxnumber % i == 0) {
+      max = i
+    }
+    if (minnumber % i == 0 && maxnumber % i == 0 && judge == true) {
+      min = i
+      judge = false
+    }
+  }
+  console.log(max, min)
+</script>
