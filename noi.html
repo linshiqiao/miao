@@ -1304,7 +1304,6 @@
           str += t * j + ' '
         }
       }
-      str += '\n'
     }
     console.log(str)
 
@@ -1514,15 +1513,11 @@
   }
 </script>
 
-<script xtype="xxx" id="narcissistics">
+<script type="xxx" id="narcissistics">
 
-var str = ""
-          for (var i = 1; i < 10000; i++) {
-
-    // if (Math.pow(i % 10, 3) + Math.pow((i % 100 - i % 10) / 10, 3) + Math.pow((i % 1000 - i % 100) / 100, 3) + Math.pow((i % 10000 - i % 1000) / 1000, 3) == i) {
-    //   console.log(i)
-    // }
-    var number =  i
+  var str = ""
+  for (var i = 1; i < 10000; i++) {
+    var number = i
     var sum = 0
 
     while (number > 0) {
@@ -1531,7 +1526,7 @@ var str = ""
       sum += Math.pow(x, 3)
       number = (number - x) / 10
     }
-    if(sum == i){
+    if (sum == i) {
       str = str + i + " "
     }
   }
