@@ -1554,10 +1554,9 @@
 </script>
 
 <script type="xxx" id="weekday">
-  var year = +prompt()
-  var month = +prompt()
-
-
+  var year = +prompt(), month = +prompt()
+  date = new Date(`${year}-${month}-1`)
+  console.log(date.getDay())
 </script>
 
 <script type="xxx" id="complete-number">
@@ -1641,25 +1640,34 @@
 
   var m = +prompt()
   var n = +prompt()
-  var minnumber = maxnumber = m
-    var max = min = 0
-
-  if (m > n) {
-    minnumber = n
-  } else {
-    maxnumber = n
-  }
-  for (var i = 2; i <= minnumber; i++) {
-    if (m % i == 0 && n % i == 0) {
-      max = i
-    }
-    }
-    for (var j = maxnumber; ; j++) {
-      if (j % m == 0 && j % n == 0) {
-        min = j
-        break
-    }
+  function 最大公约数(i, j) {
+    return j == 0 ? i : 最大公约数(j, i % j)
   }
 
-  console.log(max, min)
+  function 最小公倍数(i, j) {
+    return i * j / 最大公约数(i, j)
+  }
+  console.log(最大公约数(m, n), 最小公倍数(m, n))
+
+  // var minnumber = maxnumber = m
+  //   var max = min = 0
+
+  // if (m > n) {
+  //   minnumber = n
+  // } else {
+  //   maxnumber = n
+  // }
+  // for (var i = 2; i <= minnumber; i++) {
+  //   if (m % i == 0 && n % i == 0) {
+  //     max = i
+  //   }
+  //   }
+  //   for (var j = maxnumber; ; j++) {
+  //     if (j % m == 0 && j % n == 0) {
+  //       min = j
+  //       break
+  //   }
+  // }
+
+  // console.log(max, min)
 </script>
