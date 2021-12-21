@@ -1017,13 +1017,25 @@
         var seven = x * 7 * 7 + y * 7 + z
         var nine = z * 9 * 9 + y * 9 + x
         if (seven == nine) {
-          console.log(x * 7 * 7+ y * 7 + z, x*100 + y*10 + z,  z*100 + y*10 + x)
+          console.log(x * 7 * 7 + y * 7 + z, x * 100 + y * 10 + z, z * 100 + y * 10 + x)
         }
       }
     }
   }
+  // for (var i = 100; i <= 342; i++) {
+  //   var n = i
+  //     var 个7 = n % 7
+  //     var 十7 = (n - 个7) / 7 % 7
+  //     var 百7 = (n - n % 49) / 49
+  //     var 个9 = n % 9
+  //     var 十9 = (n - 个9) / 9 % 9
+  //     var 百9 = (n - n % 81) / 81
 
-
+  //     if(个7 == 百9 && 十7 == 十9 && 百7 == 个9 ){
+  //       break
+  //     }
+  //   }
+  //   console.log(i, 百7*100 + 十7*10 + 个7, 百9*100 + 十9*10 + 个9)
 </script>
 
 <script type="xxx" id="ch0105/26">
@@ -1220,21 +1232,36 @@
 
 <script type="xxx" id="ch0105/34">
 
-  var m = +prompt()
-  var add = 0
-  var sum = 1
-  for (var i = 1; i <= m; i++) {
-
-    for (var j = 1; j <= i; j++) {
-      sum *= j
-
+  //用函数
+  let m = +prompt()
+  let sum = 0
+  function factorial(n) {
+    let result = 1
+    for (let i = 1; i <= m; i++) {
+      result*=i
+      sum+=result
     }
-    add += sum
-    sum = 1
 
-
+    return sum
   }
-  console.log(add)
+console.log(factorial(m))
+
+
+  // var m = +prompt()
+  // var add = 0
+  // var sum = 1
+  // for (var i = 1; i <= m; i++) {
+
+  //   for (var j = 1; j <= i; j++) {
+  //     sum *= j
+
+  //   }
+  //   add += sum
+  //   sum = 1
+
+
+  // }
+  // console.log(add)
 
 </script>
 
@@ -1490,27 +1517,40 @@
 </script>
 
 <script type="xxx" id="narcissistic">
-
+  //用函数
   var m = +prompt()
+  function daffodil(n) {
+    let x = m
+    let sum = 0
+    while (x > 0) {
+      let 个 = x % 10
+      sum += Math.pow(个, 3)
+      x = (x - 个) / 10
+    }
+    return sum == m ? "YES" : "NO"
+  }
+  console.log(daffodil(m))
+
+
   // if (Math.pow(number % 10, 3) + Math.pow((number % 100 - number % 10) / 10, 3) + Math.pow((number - number % 100) / 100, 3) == number) {
   //   console.log("YES")
   // }
   // else {
   //   console.log("NO")
   // }
-  var number = m
-  var sum = 0
-  while (number > 0) {
+  // var number = m
+  // var sum = 0
+  // while (number > 0) {
 
-    var x = number % 10
-    sum += Math.pow(x, 3)
-    number = (number - x) / 10
-  }
-  if (sum == m) {
-    console.log("YES")
-  } else {
-    console.log("NO")
-  }
+  //   var x = number % 10
+  //   sum += Math.pow(x, 3)
+  //   number = (number - x) / 10
+  // }
+  // if (sum == m) {
+  //   console.log("YES")
+  // } else {
+  //   console.log("NO")
+  // }
 </script>
 
 <script type="xxx" id="narcissistics">
@@ -1554,24 +1594,39 @@
 </script>
 
 <script type="xxx" id="weekday">
+
   var year = +prompt(), month = +prompt()
   date = new Date(`${year}-${month}-1`)
   console.log(date.getDay())
+
 </script>
 
 <script type="xxx" id="complete-number">
-  var m = +prompt()
-  var sum = 0
-  for (var i = 1; i < m; i++) {
-    if (m % i == 0) {
-      sum += i
+  // 用函数
+  let m = +prompt()
+  let sum = 0
+  function number(n) {
+    for (let i = 1; i < n; i++) {
+      if (m % i == 0) {
+        sum += i
+      }
     }
+    return sum == m ? "YES" : "NO"
   }
-  if (sum == m) {
-    console.log("YES")
-  } else {
-    console.log("NO")
-  }
+  console.log(number(m))
+
+  // var m = +prompt()
+  // var sum = 0
+  // for (var i = 1; i < m; i++) {
+  //   if (m % i == 0) {
+  //     sum += i
+  //   }
+  // }
+  // if (sum == m) {
+  //   console.log("YES")
+  // } else {
+  //   console.log("NO")
+  // }
 
 </script>
 
@@ -1594,19 +1649,34 @@
 </script>
 
 <script type="xxx" id="prime">
-  var m = +prompt()
-  var prime  = true
-    for (var i = 2; i < m; i++) {
-    if(m % i == 0){
-      prime  = false
-      break
+  //用函数
+  let m = +prompt()
+  let primes = true
+  function prime(n) {
+    for (let i = 2; i < n; i++) {
+      if (m % i == 0) {
+        primes = false
+        break
+      }
     }
+    return primes ? "YES" : "NO"
   }
-  if (prime && m != 1) {
-    console.log("YES")
-  } else {
-    console.log("NO")
-  }
+  console.log(prime(m))
+
+
+  // var m = +prompt()
+  // var prime  = true
+  //   for (var i = 2; i < m; i++) {
+  //   if(m % i == 0){
+  //     prime  = false
+  //     break
+  //   }
+  // }
+  // if (prime && m != 1) {
+  //   console.log("YES")
+  // } else {
+  //   console.log("NO")
+  // }
 
 </script>
 
