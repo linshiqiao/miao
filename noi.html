@@ -1659,7 +1659,7 @@ console.log(factorial(m))
         break
       }
     }
-    return primes ? "YES" : "NO"
+    return primes && m != 1 ? "YES" : "NO"
   }
   console.log(prime(m))
 
@@ -1681,24 +1681,45 @@ console.log(factorial(m))
 </script>
 
 <script type="xxx" id="primes">
-  var str = ""
-  var prime = true
-  for (var i = 2; i < 100; i++) {
-    var sum = 0
-    for (var j = 2; j < i; j++) {
-      if (i % j == 0) {
-        prime = false
-        break
+  //用函数
+  let sum = ""
+
+  function primes() {
+    for (let i = 2; i < 100; i++) {
+      let primes = true
+      for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+          primes = false
+          break
+        }
+      }
+      if (primes) {
+        sum = sum + " " + i
       }
     }
-    if (prime) {
-      str = str + i + " "
-    }
-    prime = true
+    return sum
   }
+  console.log(primes())
 
 
-  console.log(str)
+  // var str = ""
+  // var prime = true
+  // for (var i = 2; i < 100; i++) {
+  //   var sum = 0
+  //   for (var j = 2; j < i; j++) {
+  //     if (i % j == 0) {
+  //       prime = false
+  //       break
+  //     }
+  //   }
+  //   if (prime) {
+  //     str = str + i + " "
+  //   }
+  //   prime = true
+  // }
+
+
+  // console.log(str)
 </script>
 
 <script type="xxx" id="itoa">
