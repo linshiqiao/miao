@@ -1642,8 +1642,7 @@
   var m = +prompt()
   var n = +prompt()
   var minnumber = maxnumber = m
-  var max = min = 0
-  var judge = true
+    var max = min = 0
 
   if (m > n) {
     minnumber = n
@@ -1651,13 +1650,16 @@
     maxnumber = n
   }
   for (var i = 2; i <= minnumber; i++) {
-    if (minnumber % i == 0 && maxnumber % i == 0) {
+    if (m % i == 0 && n % i == 0) {
       max = i
     }
-    if (minnumber % i == 0 && maxnumber % i == 0 && judge == true) {
-      min = i
-      judge = false
+    }
+    for (var j = maxnumber; ; j++) {
+      if (j % m == 0 && j % n == 0) {
+        min = j
+        break
     }
   }
+
   console.log(max, min)
 </script>
