@@ -1595,10 +1595,60 @@ console.log(factorial(m))
 
 <script type="xxx" id="weekday">
 
+  // var year = +prompt(), month = +prompt()
+  // date = new Date(`${year}-${month}-1`)
+  // console.log(date.getDay())
   var year = +prompt(), month = +prompt()
-  date = new Date(`${year}-${month}-1`)
-  console.log(date.getDay())
+  var day = 0
+  function is闰年(year) {
+    if (year % 400 == 0) {
+      return true
+    } else if (year % 100 == 0) {
+      return false
+    } else if (year % 4 == 0) {
+      return true
+    }
+  }
+  function ismonthday(month) {
+    switch (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        day += 31
+        break
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+        day += 30
+        break
+      case 2:
+        if (is闰年(year)) {
+          day += 29
+        } else {
+          day += 28
+        }
+    }
 
+  }
+  function weekday(year, month) {
+    for (var i = 1; i < year; i++) {
+      if (is闰年(i)) {
+        day += 366
+      } else {
+        day += 365
+      }
+    }
+    for (var i = 1; i < month; i++) {
+      ismonthday(i)
+    }
+    return (day + 1) % 7
+  }
+  console.log(weekday(year, month))
 </script>
 
 <script type="xxx" id="complete-number">
@@ -1723,10 +1773,47 @@ console.log(factorial(m))
 </script>
 
 <script type="xxx" id="itoa">
-
-  var n = prompt()
-  console.log(n)
-
+  var result = ""
+  var m = +prompt()
+  var n = m
+  function itoa(n) {
+    if (n == 0) {
+      result = "0" + result
+    }
+    if (n == 1) {
+      result = "1" + result
+    }
+    if (n == 2) {
+      result = "2" + result
+    }
+    if (n == 3) {
+      result = "3" + result
+    }
+    if (n == 4) {
+      result = "4" + result
+    }
+    if (n == 5) {
+      result = "5" + result
+    }
+    if (n == 6) {
+      result = "6" + result
+    }
+    if (n == 7) {
+      result = "7" + result
+    }
+    if (n == 8) {
+      result = "7" + result
+    }
+    if (n == 9) {
+      result = "9" + result
+    }
+  }
+  while (n > 0) {
+    var 个 = n % 10
+    itoa(个)
+    n = (n - 个) / 10
+  }
+  console.log(result)
 </script>
 
 <script type="xxx" id="lcf&lcm">
@@ -1766,10 +1853,52 @@ console.log(factorial(m))
 </script>
 
 <script type="xxx" id="sqrt">
+  // 用函数暴力解题
+  // var m = +prompt()
+  // function sqrt(n) {
+  //   for (var i = 0; i < n; i += 0.001) {
+  //     if (i ** 2 > n) {
+  //       return i - 0.001
+  //     }
+  //   }
+  // }
+  // console.log(sqrt(m).toFixed(3))
 
+  //用函数二分法
+  // var m = +prompt()
+  // function sqrt(n) {
+  //   var left = 0
+  //   var right = m
+
+  //   do {
+  //     var mid = (left + right) / 2
+  //     if (mid * mid > m) {
+  //       right = mid
+  //     } else if (mid * mid < m) {
+  //       left = mid
+  //     } else {
+  //       return mid
+  //     }
+
+  //   } while (Math.abs(mid * mid - m) > 0.00000001)
+  //   return mid
+  // }
+  //   console.log(sqrt(m))
+
+  // 牛顿法
   var m = +prompt()
-  for (var i = (m + 1) / 2; i ** 2 > m; i -= 0.001) {
-  }
-  console.log(i.toFixed(3))
+    function sqrt(n) {
+      var x = n
+      while (Math.abs(x * x - n) > 0.0000000001) {
+
+        var x = x / 2 + n / 2 / x
+      }
+        return x
+      }
+      console.log(sqrt(m))
+  // var m = +prompt()
+  // for (var i = (m + 1) / 2; i ** 2 > m; i -= 0.001) {
+  // }
+  // console.log(i.toFixed(3))
 
 </script>
