@@ -79,17 +79,23 @@
 
   }
   //画一条两个实点两个空点的虚线
-  for (var i = 1; i <= 500; i += 4) {
+    for (var i = 1; i <= 500; i++) {
 
-    dot(i, 60, "black")
-    dot(i + 1, 60, "black")
+    // dot(i, 60, "black")
+    // dot(i + 1, 60, "black")
+    if (i % 4 < 2) {
+      dot(i, 60, "black")
+    }
   }
   //画一条三个实点两个空点的虚线
-  for (var i = 1; i <= 500; i += 5) {
+    for (var i = 1; i <= 500; i++) {
 
-    dot(i, 70, "gray")
-    dot(i + 1, 70, "gray")
-    dot(i + 2, 70, "gray")
+    // dot(i, 70, "gray")
+    // dot(i + 1, 70, "gray")
+    // dot(i + 2, 70, "gray")
+    if (i % 5 < 3) {
+      dot(i, 70, "gray")
+    }
   }
 
   //画一条45度的斜线
@@ -103,15 +109,21 @@
 
   for (var i = 500; i >= 0; i--) {
 
-    dot(Math.sqrt(3) * i, i, "green")
+        dot(i, i / Math.sqrt(3), "green")
+
+      }
+      for (var y = 0; y < 400; y++) {
+
+        dot(y / Math.sqrt(3), y, "green")
 
   }
   //画一条跨越//画布左上角和右下角的对角线
   for (var i = 0; i <= 500; i++) {
 
-    dot(1.25 * i, i, "blue")
+    dot(i, 0.8 * i, "blue")
 
   }
+
   //画一个空心矩形
   for (var i = 300; i <= 400; i++) {
 
@@ -122,22 +134,67 @@
     }
   }
   //画一个实心矩形
-  for (var i = 100; i <= 200; i++) {
+    for (var i = 0; i < 100; i++) {
 
-    for (var j = 100; j <= 150; j++) {
-      dot(i, j, "red")
+    for (var j = 0; j < 100; j++) {
+      var color = "rgb(" + i / 100 * 256 + "," + j / 100 * 256 + ", 255)"
+      dot(i + 200, j + 200, color)
+
+      // var x1 = i
+      // var y1 = j + 0.27 * i
+      // var x1 = 2 * i
+      // var y1 = 2 * j
+      var x1 = 0.5 * i - 0.87 * j
+      var y1 = 0.87 * i + 0.5 * j
+      dot(x1 + 100, y1, color)
     }
   }
   //画两个个空心的圆，居中：
   //一个半径为50像素
-  for (var i = 200; i <= 300; i++) {
-    for (var j = 0; j <= 100; j++) {
-      if ((i - 250) * (i - 250) + (j - 50) * (j - 50) == 2500) {
-        dot(i, j, "red")
+    // for (var i = 200; i <= 300; i++) {
+    //   for (var j = 0; j <= 100; j++) {
+    //     if ((i - 250) * (i - 250) + (j - 50) * (j - 50) == 2500) {
+    //       dot(i, j, "red")
+    //     }
+    //   }
+
+    // }
+    for (var x = -50; x <= 50; x++) {
+
+      var y = Math.sqrt(2500 - x * x)
+      var color = "rgb(" + x / 100 * 256 + "," + y / 100 * 256 + ", 255)"
+      dot(x + 200, y + 100, color)
+      dot(x + 200, -y + 100, color)
+    }
+    for (var theta = 0; theta <= 2 * Math.PI; theta += 0.01) {
+      var x = Math.sin(theta) * 50
+      var y = Math.cos(theta) * 50
+      var color = "rgb(" + x / 50 * 256 + "," + y / 50 * 256 + ", 255)"
+
+      dot(x + 100, y + 100, color)
+    }
+    function circle(cx, cy, r) {
+      var x = 0
+      var y = r
+      while (x < y) {
+        dot(cx + x, cy + y)
+        dot(cx + x, cy + -y)
+        dot(cx + -x, cy + y)
+        dot(cx + -x, cy + -y)
+        dot(cx + y, cy + x)
+        dot(cx + y, cy + -x)
+        dot(cx + -y, cy + x)
+        dot(cx + -y, cy + -x)
+        x++
+        var a = x * x + y * y
+        var b = x * x + (y - 1) * (y - 1)
+        if (Math.abs(a - r * r) > Math.abs(b - r * r)) {
+          y--
       }
     }
-
   }
+    circle(250, 200, 250)
+    circle(250, 200, 100)
   //一个半径为200像素
   for (var i = 150; i <= 350; i++) {
     for (var j = 200; j <= 400; j++) {
@@ -148,13 +205,37 @@
 
   }
   //画一个实心的圆，半径至少为100像素
-  for (var i = 0; i <= 200; i++) {
-    for (var j = 200; j <= 400; j++) {
-      if ((i - 100) * (i - 100) + (j - 300) * (j - 300) <= 10000) {
-        dot(i, j, "rgb(213,194,179)")
+    // for (var i = 0; i <= 200; i++) {
+    //   for (var j = 200; j <= 400; j++) {
+    // var color = `rgb(` + (200 - i) / 200 * 256 + `,` + (400 - j) / 200 * 256 + `,255)`
+    // var color = "rgb(" + x / 50 * 256 + "," + y / 50 * 256 + ", 255)"
+    //     if ((i - 100) * (i - 100) + (j - 300) * (j - 300) <= 10000) {
+
+    //       dot(i, j, "black")
+    //     }
+    //   }
+
+    // }
+    for (var x = 0; x < 200; x++) {
+      for (var y = 0; y < 200; y++) {
+        var color = `rgb(` + x / 200 * 256 + `,` + y / 200 * 256 + `,255)`
+        if (Math.abs(x - 100) ** 2 + Math.abs(y - 100) ** 2 <= 10000) {
+          dot(x, y + 200, color)
+        }
       }
     }
 
+
+
+
+
+  for (let i = 0; i < 360; i++) {
+    for (let k = 0; k <= 100; k++) {
+      let x = 400 + k * Math.sin(i / 180 * Math.PI)
+      let y = 100 + k * Math.cos(i / 180 * Math.PI)
+      var color = `rgb(` + i / 360 * 180 + `,` + i / 360 * 256 + `,255)`
+      dot(x, y, color)
+    }
   }
   //画一个【大小合适】的sin(x)的图像
   for (var i = 0; i <= 500; i++) {
