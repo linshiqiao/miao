@@ -18,5 +18,34 @@ var linshiqiao = {
       cut += size
     }
     return arrays
+  },
+  compact: function (array) {
+    var arrays = []
+    for (var i in array) {
+      if (array[i] != false && array[i] != null && array[i] != 0 && array[i] != "" && array[i] != undefined && array[i] != NaN) {
+        arrays.push(array[i])
+      }
+    }
+    return arrays
+  },
+  concat: function (array, ...ary) {
+    if (arguments.length == 1) {
+      return array
+    } else {
+      for (var i in ary) {
+        var property = ary[i]
+        if (Array.isArray(property)) {
+          for (var j in property) {
+            array.push(property[j])
+          }
+        } else {
+          array.push(property)
+        }
+      }
+    }
+    return array
+  },
+  difference: function (array, values) {
+
   }
 }
