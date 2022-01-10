@@ -22,7 +22,7 @@ var linshiqiao = {
   compact: function (array) {
     var arrays = []
     for (var i in array) {
-      if (array[i] != false && array[i] != null && array[i] != 0 && array[i] != "" && array[i] != undefined && array[i] != NaN) {
+      if (array[i] != false && array[i] != null && array[i] != 0 && array[i] != "" && array[i] != undefined && array[i] == array[i]) {
         arrays.push(array[i])
       }
     }
@@ -46,6 +46,19 @@ var linshiqiao = {
     return array
   },
   difference: function (array, values) {
-
+    var arrays = []
+    for (var i in array) {
+      var judge = true
+      for (var j in values) {
+        if (array[i] == values[j]) {
+          judge = false
+          break
+        }
+      }
+      if (judge) {
+        arrays.push(array[i])
+      }
+    }
+    return arrays
   }
 }
