@@ -45,16 +45,19 @@ var linshiqiao = {
     }
     return array
   },
-  difference: function (array, values) {
+  difference: function (array, ...ary) {
     var arrays = []
     for (var i in array) {
       var judge = true
-      for (var j in values) {
-        if (array[i] == values[j]) {
-          judge = false
-          break
+      ary.forEach((value) => {
+        for (var j in value) {
+          if (array[i] == value[j]) {
+            judge = false
+            break
+          }
         }
-      }
+
+      })
       if (judge) {
         arrays.push(array[i])
       }
