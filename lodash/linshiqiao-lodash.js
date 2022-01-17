@@ -63,5 +63,34 @@ var linshiqiao = {
       }
     }
     return arrays
-  }
+  },
+
+  drop: function (array, n = 1) {
+    if (n > array.length - 1) {
+      return []
+    } else {
+      var arrays = []
+      for (var i = n; i < array.length; i++) {
+        arrays.push(array[i])
+      }
+      return arrays
+    }
+  },
+  dropRight: function (array, n = 1) {
+    if (n > array.length - 1) {
+      return []
+    } else {
+      var arrays = []
+      for (var i = 0; i < array.length - n; i++) {
+        arrays.push(array[i])
+      }
+      return arrays
+    }
+  },
+  fill: function (array, value, start = 0, end = array.length) {
+    for (var i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  },
 }
