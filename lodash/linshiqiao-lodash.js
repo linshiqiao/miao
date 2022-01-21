@@ -93,4 +93,39 @@ var linshiqiao = {
     }
     return array
   },
+  flatten: function (array) {
+    return [].concat(...array)
+  },
+  flattenDeep: function (array, arrays = []) {
+    for (var i in array) {
+      if (Array.isArray(array[i])) {
+        linshiqiao.flattenDeep(linshiqiao.flatten(array[i]), arrays)
+
+      } else {
+        arrays.push(array[i])
+      }
+    }
+    return arrays
+  },
+  flattenDepth: function (array, depth = 1) {
+    var arrays = array
+    if (depth == 0) {
+      return array
+    }
+    while (depth >= 1) {
+      var judge = true
+      arrays = linshiqiao.flatten(arrays)
+      depth--
+      for (var i in arrays) {
+        if (Array.isArray(arrays[i])) {
+          judge = false
+          break
+        }
+      }
+      if (judge) {
+        break
+      }
+    }
+    return arrays
+  },
 }
