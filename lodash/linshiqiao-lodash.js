@@ -168,7 +168,7 @@ var linshiqiao = {
   },
   join: function (array, separator = ',') {
     var strs = ''
-    array.forEach(it => strs += separator + it)
+    array.forEach(it => strs += "" + separator + it)
     strs = strs.substring(1)
     return strs
   },
@@ -230,7 +230,7 @@ var linshiqiao = {
     var ary = arrays
     args = linshiqiao.flattenDeep(args)
     for (var i in args) {
-      if (linshiqiao.indexOf(arrays, args[i]) == -1) {
+      if (linshiqiao.indexOf(ary, args[i]) == -1) {
         ary.push(args[i])
       }
     }
@@ -246,15 +246,12 @@ var linshiqiao = {
     return arrays
   },
   unzip: function (...array) {
-    length = array.length - 1
-    max = 0
+    array = [array[0]]
+    length = array[0].length - 1
     var arrays = []
-    for (var i = 0; i <= length; i++) {
-      max = Math.max(max, array[i].length - 1)
-    }
-    for (var j = 0; j <= max; j++) {
+    for (var j = 0; j <= length; j++) {
       var ary = []
-      for (var i = 0; i <= length; i++) {
+      for (var i = 0; i < array.length; i++) {
         ary.push(array[i][j])
       }
       arrays.push(ary)
@@ -283,6 +280,22 @@ var linshiqiao = {
       if (linshiqiao.indexOf(flat, flattendeep[i]) == -1) {
         arrays.push(flattendeep[i])
       }
+    }
+    return arrays
+  },
+  zip: function (...array) {
+    length = array.length - 1
+    max = 0
+    var arrays = []
+    for (var i = 0; i <= length; i++) {
+      max = Math.max(max, array[i].length - 1)
+    }
+    for (var j = 0; j <= max; j++) {
+      var ary = []
+      for (var i = 0; i <= length; i++) {
+        ary.push(array[i][j])
+      }
+      arrays.push(ary)
     }
     return arrays
   },
