@@ -128,4 +128,47 @@ var linshiqiao = {
     }
     return arrays
   },
+  fromPairs: function (pairs) {
+    var obj = {}
+    pairs = linshiqiao.flattenDeep(pairs)
+    for (var i = 0; i < pairs.length; i += 2) {
+      var nature = pairs[i]
+      obj[nature] = pairs[i + 1]
+    }
+    return obj
+  },
+  head: function (array) {
+    return array[0]
+  },
+  indexOf: function (array, value, fromIndex = 1) {
+    var counter = 1
+    for (var i in array) {
+      if (array[i] === value && counter === fromIndex) {
+        return i
+      } else if (array[i] === value) {
+        counter++
+      }
+
+    }
+    return -1
+  },
+  initial: function (array) {
+    return array.slice(0, array.length - 1)
+  },
+  intersection: function (arrays) {
+    var array = []
+    for (var i in arrays) {
+      for (var j = 1; j < arguments.length; j++) {
+
+        if (linshiqiao.indexOf(arguments[j], arrays[i]) == -1) {
+          break
+        }
+      }
+      if (linshiqiao.indexOf(arguments[j - 1], arrays[i]) != -1 && j == arguments.length) {
+        array.push(arrays[i])
+      }
+    }
+    return array
+  },
 }
+
