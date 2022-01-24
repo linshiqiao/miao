@@ -230,7 +230,7 @@ var linshiqiao = {
     var ary = arrays
     args = linshiqiao.flattenDeep(args)
     for (var i in args) {
-      if (linshiqiao.indexOf(ary, args[i]) == -1) {
+      if (!ary.includes(args[i])) {
         ary.push(args[i])
       }
     }
@@ -246,7 +246,7 @@ var linshiqiao = {
     return arrays
   },
   unzip: function (...array) {
-    array = [array[0]]
+    array = array[0]
     length = array[0].length - 1
     var arrays = []
     for (var j = 0; j <= length; j++) {
