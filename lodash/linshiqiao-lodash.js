@@ -166,10 +166,10 @@ var linshiqiao = {
     }
     return array
   },
-  join: function (array, str) {
+  join: function (array, separator = ',') {
     var strs = ''
-    array.forEach(it => strs += it + str)
-    strs.substring(0, a.length - 1)
+    array.forEach(it => strs += separator + it)
+    strs = strs.substring(1)
     return strs
   },
   last: function (array) {
@@ -196,9 +196,8 @@ var linshiqiao = {
     array.length = counter
     return array
   },
-  pullAll: function (array, ...values) {
+  pullAll: function (array, values) {
     var counter = 0
-    values = linshiqiao.flattenDeep(values)
     for (var i in array) {
       for (var j = 0; j < values.length && array[i] != values[j]; j++) {
 
@@ -226,6 +225,66 @@ var linshiqiao = {
     }
     array.length = counter
     return array
+  },
+  union: function (arrays, ...args) {
+    var ary = arrays
+    args = linshiqiao.flattenDeep(args)
+    for (var i in args) {
+      if (linshiqiao.indexOf(arrays, args[i]) == -1) {
+        ary.push(args[i])
+      }
+    }
+    return ary
+  },
+  uniq: function (array) {
+    var arrays = []
+    for (var i in array) {
+      if (linshiqiao.indexOf(arrays, array[i]) == -1) {
+        arrays.push(array[i])
+      }
+    }
+    return arrays
+  },
+  unzip: function (...array) {
+    length = array.length - 1
+    max = 0
+    var arrays = []
+    for (var i = 0; i <= length; i++) {
+      max = Math.max(max, array[i].length - 1)
+    }
+    for (var j = 0; j <= max; j++) {
+      var ary = []
+      for (var i = 0; i <= length; i++) {
+        ary.push(array[i][j])
+      }
+      arrays.push(ary)
+    }
+    return arrays
+  },
+  without: function (array, ...values) {
+    var arrays = []
+    for (var i in array) {
+      for (var j = 0; j < values.length && array[i] != values[j]; j++) {
+
+      }
+      if (j == values.length) {
+        arrays.push(array[i])
+      }
+    }
+    return arrays
+  },
+  xor: function (...array) {
+    var arrays = []
+    var flattendeep = linshiqiao.flattenDeep(array)
+    for (var i in flattendeep) {
+
+      var flat = linshiqiao.flattenDeep(array)
+      flat[i] = []
+      if (linshiqiao.indexOf(flat, flattendeep[i]) == -1) {
+        arrays.push(flattendeep[i])
+      }
+    }
+    return arrays
   },
 }
 
