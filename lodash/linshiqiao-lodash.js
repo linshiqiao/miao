@@ -166,5 +166,66 @@ var linshiqiao = {
     }
     return array
   },
+  join: function (array, str) {
+    var strs = ''
+    array.forEach(it => strs += it + str)
+    strs.substring(0, a.length - 1)
+    return strs
+  },
+  last: function (array) {
+    return array[array.length - 1]
+  },
+  lastIndexOf: function (array, value, fromIndex = array.length - 1) {
+    for (var i = fromIndex; i >= 0; i--) {
+      if (array[i] === value) {
+        return i
+      }
+    }
+    return -1
+  },
+  pull: function (array, ...values) {
+    var counter = 0
+    for (var i in array) {
+      for (var j = 0; j < values.length && array[i] != values[j]; j++) {
+
+      }
+      if (j == values.length) {
+        array[counter++] = array[i]
+      }
+    }
+    array.length = counter
+    return array
+  },
+  pullAll: function (array, ...values) {
+    var counter = 0
+    values = linshiqiao.flattenDeep(values)
+    for (var i in array) {
+      for (var j = 0; j < values.length && array[i] != values[j]; j++) {
+
+      }
+      if (j == values.length) {
+        array[counter++] = array[i]
+      }
+    }
+    array.length = counter
+    return array
+  },
+  reverse: function (array) {
+    var counter = array.length - 1
+    for (var i = 0; i < array.length && i < counter; i++) {
+      var number = array[i]
+      array[i] = array[counter]
+      array[counter--] = number
+    }
+    return array
+  },
+  slice: function (array, start = 0, end = array.length) {
+    var counter = 0
+    for (var i = start; i < end; i++) {
+      array[counter++] = array[i]
+    }
+    array.length = counter
+    return array
+  },
 }
 
