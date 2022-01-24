@@ -140,15 +140,11 @@ var linshiqiao = {
   head: function (array) {
     return array[0]
   },
-  indexOf: function (array, value, fromIndex = 1) {
-    var counter = 1
-    for (var i in array) {
-      if (array[i] === value && counter === fromIndex) {
+  indexOf: function (array, value, fromIndex = 0) {
+    for (var i = fromIndex; i < array.length; i++) {
+      if (array[i] === value) {
         return i
-      } else if (array[i] === value) {
-        counter++
       }
-
     }
     return -1
   },
