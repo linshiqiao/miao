@@ -299,5 +299,44 @@ var linshiqiao = {
     }
     return arrays
   },
+  countBy: function (collection, iteratee) {
+    var obj = {}
+    for (var i = 0; i < collection.length; i++) {
+      if (typeof (iteratee) == 'string') {
+        if (!obj[collection[i][iteratee]]) {
+          obj[collection[i][iteratee]] = 1
+        } else {
+          obj[collection[i][iteratee]]++
+        }
+      } else {
+        if (!obj[iteratee(collection[i])]) {
+          obj[iteratee(collection[i])] = 1
+        } else {
+          obj[iteratee(collection[i])]++
+        }
+      }
+    }
+    return obj
+  },
+  every: function (...collection) {
+    collection = linshiqiao.flattenDeep(collection)
+    for (var i in collection) {
+      if (typeof (collection[i]) == 'object') {
+        if (!collection[i]) {
+          return false
+        }
+        for (var j in collection[i]) {
+          if (!collection[i][j]) {
+            return false
+          }
+        }
+      } else {
+        if (!collection[i]) {
+          return false
+        }
+      }
+    }
+    return true
+  },
 }
 
