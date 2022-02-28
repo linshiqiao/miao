@@ -15,28 +15,36 @@
   strong:nth-child(even) {
     background-color: #9fcfff;
   }
+
   em {
-      font-style: normal;
-    }
-    em:nth-child(1) {
-      background-color: #c4e8ac;
-    }
-    em:nth-child(2) {
-      background-color: #f6d7a6;
-    }
-    em:nth-child(3) {
-      background-color: #c8c8ff;
-    }
-    em:nth-child(4) {
-      background-color: #f2cfff;
-    }
-    em:nth-child(5) {
-      background-color: #ffc5bf;
-    }
-    em:nth-child(6) {
-      background-color: #c8e7d6;
-    }
-  strong:empty{
+    font-style: normal;
+  }
+
+  em:nth-child(1) {
+    background-color: #c4e8ac;
+  }
+
+  em:nth-child(2) {
+    background-color: #f6d7a6;
+  }
+
+  em:nth-child(3) {
+    background-color: #c8c8ff;
+  }
+
+  em:nth-child(4) {
+    background-color: #f2cfff;
+  }
+
+  em:nth-child(5) {
+    background-color: #ffc5bf;
+  }
+
+  em:nth-child(6) {
+    background-color: #c8e7d6;
+  }
+
+  strong:empty {
     display: inline-block;
     background-color: red;
     width: 2px;
@@ -45,6 +53,7 @@
     height: 1.3em;
     vertical-align: bottom;
   }
+
   #string {
     width: 400px;
     position: relative;
@@ -67,16 +76,17 @@
     font-family: consolas;
     position: absolute;
   }
+
   em:hover {
-      box-shadow: 0 0 2px black;
-      position: relative;
-      z-index: 8;
-    }
+    box-shadow: 0 0 2px black;
+    position: relative;
+    z-index: 8;
+  }
 </style>
 
 <body>
   <div>REGULAR EXPRESSION</div>
-  <input type="text" oninput="run()" id="reInput">
+  <input type="text" id="reInput">
   <div>
     <label for="">g<input type="checkbox" id="reFlagGlobal"></label>
     <label for="">m<input type="checkbox" id="reFlagMultiline"></label>
@@ -85,7 +95,7 @@
   <div>TEST STRING</div>
   <div id="string">
     <pre id="resultShow"></pre>
-    <textarea id="testStringInput" onscroll="scrollSync()" cols="30" rows="5" oninput="run()"></textarea>
+    <textarea id="testStringInput" onscroll="scrollSync()" cols="30" rows="5"></textarea>
   </div>
 
   <script>
@@ -93,7 +103,7 @@
       var reStr = reInput.value
       var testString = testStringInput.value
       var flag = getflag()
-      if(reStr.length == 0){
+      if (reStr.length == 0) {
         resultShow.innerHTML = testString + `\n`
         return
       }
@@ -174,7 +184,15 @@
         flags += 'i'
       }
       return flags
-    }
+    };
+    var input = document.querySelector('input');
+    var textarea = document.querySelector('textarea');
+    input.addEventListener('input', function () {
+      run()
+    });
+    textarea.addEventListener('input', function () {
+      run()
+    });
   </script>
 </body>
 
